@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *cloud3;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnLeft;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnRight;
+@property(nonatomic, weak) UIActivityIndicatorView *indicatorView;
 
 @end
 
@@ -28,6 +29,13 @@
     
     self.loginBtn.layer.cornerRadius = 5;
     self.loginBtn.layer.masksToBounds = YES;
+    
+    UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicatorView.frame = CGRectMake(-25, 6.0, 20, 20);
+    [indicatorView startAnimating];
+    indicatorView.alpha = 0.0;
+    self.indicatorView = indicatorView;
+    [self.loginBtn addSubview:indicatorView];
 }
 
 - (void)viewDidLayoutSubviews
@@ -93,6 +101,14 @@
         bounds.size.width += 80;
         self.loginBtn.bounds = bounds;
 //        [self.loginBtn layoutIfNeeded];
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.33 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:0.0 options:0 animations:^{
+        self.loginBtn.centerY += 60;
+        self.loginBtn.backgroundColor = [UIColor colorWithRed:0.85 green:0.83 blue:0.45 alpha:1.0];
+        self.indicatorView.center = CGPointMake(40, self.loginBtn.frame.size.height * 0.5);
+        self.indicatorView.alpha = 1.0;
+        
     } completion:nil];
     
 }
