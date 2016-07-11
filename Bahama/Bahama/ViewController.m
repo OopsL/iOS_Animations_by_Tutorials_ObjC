@@ -61,12 +61,20 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.titleLabel.centerX += self.view.bounds.size.width;
     }];
-    [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+//    [UIView animateWithDuration:0.5 delay:0.3 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+//        self.userName.centerX += self.view.bounds.size.width;
+//    } completion:nil];
+    
+    [UIView animateWithDuration:0.5 delay:0.3 usingSpringWithDamping:0.6 initialSpringVelocity:0.0 options:0 animations:^{
         self.userName.centerX += self.view.bounds.size.width;
     } completion:nil];
     
-    [UIView animateWithDuration:0.5 delay:0.4 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.passWord.centerX += self.view.bounds.size.width;
+//    [UIView animateWithDuration:0.5 delay:0.4 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+//        self.passWord.centerX += self.view.bounds.size.width;
+//    } completion:nil];
+    
+    [UIView animateWithDuration:0.5 delay:0.4 usingSpringWithDamping:0.6 initialSpringVelocity:0.0 options:0 animations:^{
+         self.passWord.centerX += self.view.bounds.size.width;
     } completion:nil];
     
     [UIView animateWithDuration:0.5 delay:0.5 options:UIViewAnimationOptionCurveEaseIn animations:^{
