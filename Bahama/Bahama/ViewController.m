@@ -23,6 +23,10 @@
 @property(nonatomic, weak) UILabel *bannerLabel;
 @property(nonatomic, strong) NSArray *bannerTextArray;
 @property(nonatomic, assign) CGPoint bannerViewCenter;
+/**
+ *  是否执行viewDidLayoutSubviews中的动画  键盘弹出时 会调用此方法.
+ */
+@property(nonatomic, assign) BOOL excuteLayoutAnim;
 
 @end
 
@@ -39,11 +43,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.excuteLayoutAnim = YES;
     self.loginBtn.layer.cornerRadius = 5;
     self.loginBtn.layer.masksToBounds = YES;
     
     [self initActivityIndicator];
-    
+
     [self initBanner];
 }
 
@@ -78,26 +83,38 @@
 
 - (void)viewDidLayoutSubviews
 {
-    self.bannerView.center = self.loginBtn.center;
-    self.bannerViewCenter = self.bannerView.center;
     [super viewDidLayoutSubviews];
-    self.titleLabel.centerX -= self.view.bounds.size.width;
-    self.userName.centerX -= self.view.bounds.size.width;
-    self.passWord.centerX -= self.view.bounds.size.width;
-    self.loginBtn.centerY += 30;
-    self.loginBtn.alpha = 0.0;
 
-    self.cloud1.alpha = 0.0;
-    self.cloud2.alpha = 0.0;
-    self.cloud3.alpha = 0.0;
-    self.cloud4.alpha = 0.0;
+    NSLog(@"%s",__func__);
     
+    if (self.excuteLayoutAnim) {
+        self.bannerView.center = self.loginBtn.center;
+        self.bannerViewCenter = self.bannerView.center;
+        self.titleLabel.centerX -= self.view.bounds.size.width;
+        self.userName.centerX -= self.view.bounds.size.width;
+        self.passWord.centerX -= self.view.bounds.size.width;
+        self.loginBtn.centerY += 30;
+        self.loginBtn.alpha = 0.0;
+        
+        self.cloud1.alpha = 0.0;
+        self.cloud2.alpha = 0.0;
+        self.cloud3.alpha = 0.0;
+        self.cloud4.alpha = 0.0;
+        
+    }
     
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    self.excuteLayoutAnim = NO;
+    
+    [self animateCloud:self.cloud1];
+    [self animateCloud:self.cloud2];
+    [self animateCloud:self.cloud3];
+    [self animateCloud:self.cloud4];
     
     [UIView animateWithDuration:0.5 animations:^{
         self.titleLabel.centerX += self.view.bounds.size.width;
@@ -169,13 +186,25 @@
     if (index < self.bannerTextArray.count) {
         self.bannerLabel.text = self.bannerTextArray[index];
     }
-    [UIView transitionWithView:self.bannerView duration:0.33 options:UIViewAnimationOptionCurveEaseOut | UIViewAnimationOptionTransitionCurlDown animations:^{
+//    [UIView transitionWithView:self.bannerView duration:0.33 options:UIViewAnimationOptionCurveEaseOut | UIViewAnimationOptionTransitionCurlDown animations:^{
+//        self.bannerView.hidden = NO;
+//    } completion:^(BOOL finished) {
+//        if (index < self.bannerTextArray.count - 1) {
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//                [self removeBannerMessage:index + 1];
+//            });
+//        }
+//    }];
+    
+    [UIView transitionWithView:self.bannerView duration:0.33 options:UIViewAnimationOptionTransitionFlipFromBottom animations:^{
         self.bannerView.hidden = NO;
     } completion:^(BOOL finished) {
         if (index < self.bannerTextArray.count - 1) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self removeBannerMessage:index + 1];
             });
+        }else{
+            [self resetForm];
         }
     }];
     
@@ -190,6 +219,39 @@
         self.bannerView.center = self.bannerViewCenter;
         
         [self showBannerWithIndex:index];
+    }];
+}
+
+- (void)resetForm
+{
+    [UIView transitionWithView:self.bannerView duration:0.2 options:UIViewAnimationOptionTransitionFlipFromTop animations:^{
+        self.bannerView.hidden = YES;
+        self.bannerView.center = self.bannerViewCenter;
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
+        self.indicatorView.center = CGPointMake(-25, 16);
+        self.indicatorView.alpha = 0.0;
+        self.loginBtn.backgroundColor = [UIColor colorWithRed:0.63 green:0.84 blue:0.35 alpha:1.0];
+        //修改bounds,与之前增加width时保持一致
+        CGRect bounds = self.loginBtn.bounds;
+        bounds.size.width -= 80.0;
+        self.loginBtn.bounds = bounds;
+        self.loginBtn.centerY -= 60;
+        
+        
+    } completion:nil];
+}
+
+- (void)animateCloud:(UIImageView *)cloud
+{
+    //移动view.width设置为60s
+    CGFloat duration = (self.view.frame.size.width - cloud.frame.origin.x) * 60 / self.view.frame.size.width;
+    [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        cloud.originX = self.view.frame.size.width;
+    } completion:^(BOOL finished) {
+        cloud.originX = -cloud.frame.size.width;
+        [self animateCloud:cloud];
     }];
 }
 

@@ -56,4 +56,16 @@
     return self.frame.size.height;
 }
 
+- (CGFloat)originX
+{
+    return self.frame.origin.x;
+}
+
+- (void)setOriginX:(CGFloat)originX
+{
+    CGRect frame = self.frame;
+    frame.origin.x = originX;
+    self.frame = frame;
+}
+
 @end

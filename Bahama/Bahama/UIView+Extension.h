@@ -23,4 +23,8 @@
 
 - (CGFloat)height;
 
+- (CGFloat)originX;
+
+- (void)setOriginX:(CGFloat)originX;
+
 @end
