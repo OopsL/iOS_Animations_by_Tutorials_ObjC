@@ -19,10 +19,22 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnLeft;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnRight;
 @property(nonatomic, weak) UIActivityIndicatorView *indicatorView;
+@property(nonatomic, weak) UIImageView *bannerView;
+@property(nonatomic, weak) UILabel *bannerLabel;
+@property(nonatomic, strong) NSArray *bannerTextArray;
+@property(nonatomic, assign) CGPoint bannerViewCenter;
 
 @end
 
 @implementation ViewController
+
+- (NSArray *)bannerTextArray
+{
+    if (!_bannerTextArray) {
+        _bannerTextArray = [[NSArray alloc] initWithObjects:@"Connecting ...", @"Authorizing ...", @"Sending credentials ...", @"Failed", nil];
+    }
+    return _bannerTextArray;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,6 +42,13 @@
     self.loginBtn.layer.cornerRadius = 5;
     self.loginBtn.layer.masksToBounds = YES;
     
+    [self initActivityIndicator];
+    
+    [self initBanner];
+}
+
+- (void)initActivityIndicator
+{
     UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     indicatorView.frame = CGRectMake(-25, 6.0, 20, 20);
     [indicatorView startAnimating];
@@ -38,8 +57,29 @@
     [self.loginBtn addSubview:indicatorView];
 }
 
+/**
+ *  初始化banner
+ */
+- (void)initBanner
+{
+    UIImageView *bannerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"banner"]];
+    
+    bannerView.hidden = YES;
+    self.bannerView = bannerView;
+    [self.view addSubview:bannerView];
+    
+    UILabel *bannerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, bannerView.width, bannerView.height)];
+    bannerLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:18];
+    bannerLabel.textColor = [UIColor colorWithRed:0.89 green:0.38 blue:0.0 alpha:1.0];
+    bannerLabel.textAlignment = NSTextAlignmentCenter;
+    self.bannerLabel = bannerLabel;
+    [self.bannerView addSubview:bannerLabel];
+}
+
 - (void)viewDidLayoutSubviews
 {
+    self.bannerView.center = self.loginBtn.center;
+    self.bannerViewCenter = self.bannerView.center;
     [super viewDidLayoutSubviews];
     self.titleLabel.centerX -= self.view.bounds.size.width;
     self.userName.centerX -= self.view.bounds.size.width;
@@ -47,11 +87,12 @@
     self.loginBtn.centerY += 30;
     self.loginBtn.alpha = 0.0;
 
-
     self.cloud1.alpha = 0.0;
     self.cloud2.alpha = 0.0;
     self.cloud3.alpha = 0.0;
     self.cloud4.alpha = 0.0;
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -117,8 +158,39 @@
         self.indicatorView.center = CGPointMake(40, self.loginBtn.frame.size.height * 0.5);
         self.indicatorView.alpha = 1.0;
         
-    } completion:nil];
+    } completion:^(BOOL finished) {
+        [self showBannerWithIndex:0];
+    }];
     
+}
+
+- (void)showBannerWithIndex:(NSInteger)index
+{
+    if (index < self.bannerTextArray.count) {
+        self.bannerLabel.text = self.bannerTextArray[index];
+    }
+    [UIView transitionWithView:self.bannerView duration:0.33 options:UIViewAnimationOptionCurveEaseOut | UIViewAnimationOptionTransitionCurlDown animations:^{
+        self.bannerView.hidden = NO;
+    } completion:^(BOOL finished) {
+        if (index < self.bannerTextArray.count - 1) {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self removeBannerMessage:index + 1];
+            });
+        }
+    }];
+    
+}
+
+- (void)removeBannerMessage:(NSInteger)index
+{
+    [UIView animateWithDuration:0.33 animations:^{
+        self.bannerView.centerX += self.view.width;
+    } completion:^(BOOL finished) {
+        self.bannerView.hidden = YES;
+        self.bannerView.center = self.bannerViewCenter;
+        
+        [self showBannerWithIndex:index];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
