@@ -14,6 +14,15 @@
 		101B52791D2CB4620078B950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101B52781D2CB4620078B950 /* Assets.xcassets */; };
 		101B527C1D2CB4620078B950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101B527A1D2CB4620078B950 /* LaunchScreen.storyboard */; };
 		101B52871D2CED3A0078B950 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B52861D2CED3A0078B950 /* UIView+Extension.m */; };
+		104622BE1D351A9F005773E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622BD1D351A9F005773E5 /* main.m */; };
+		104622C11D351A9F005773E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622C01D351A9F005773E5 /* AppDelegate.m */; };
+		104622C41D351A9F005773E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622C31D351A9F005773E5 /* ViewController.m */; };
+		104622C71D351A9F005773E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104622C51D351A9F005773E5 /* Main.storyboard */; };
+		104622C91D351A9F005773E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104622C81D351A9F005773E5 /* Assets.xcassets */; };
+		104622CC1D351A9F005773E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104622CA1D351A9F005773E5 /* LaunchScreen.storyboard */; };
+		104622D41D35CD7B005773E5 /* SnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622D31D35CD7B005773E5 /* SnowView.m */; };
+		104622D71D35D348005773E5 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622D61D35D348005773E5 /* UIView+Extension.m */; };
+		10FD60B81D35137F00543902 /* PracticeAnimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD60B71D35137F00543902 /* PracticeAnimViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,10 +38,33 @@
 		101B527D1D2CB4620078B950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101B52851D2CED3A0078B950 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		101B52861D2CED3A0078B950 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		104622BA1D351A9F005773E5 /* Chapter4_AnimPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter4_AnimPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		104622BD1D351A9F005773E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		104622BF1D351A9F005773E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		104622C01D351A9F005773E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		104622C21D351A9F005773E5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		104622C31D351A9F005773E5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		104622C61D351A9F005773E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		104622C81D351A9F005773E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		104622CB1D351A9F005773E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		104622CD1D351A9F005773E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		104622D21D35CD7B005773E5 /* SnowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowView.h; sourceTree = "<group>"; };
+		104622D31D35CD7B005773E5 /* SnowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowView.m; sourceTree = "<group>"; };
+		104622D51D35D348005773E5 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		104622D61D35D348005773E5 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		10FD60B61D35137F00543902 /* PracticeAnimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeAnimViewController.h; sourceTree = "<group>"; };
+		10FD60B71D35137F00543902 /* PracticeAnimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeAnimViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		101B52661D2CB4620078B950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		104622B71D351A9F005773E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				101B526B1D2CB4620078B950 /* Bahama */,
+				104622BB1D351A9F005773E5 /* Chapter4_AnimPractice */,
 				101B526A1D2CB4620078B950 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				101B52691D2CB4620078B950 /* Bahama.app */,
+				104622BA1D351A9F005773E5 /* Chapter4_AnimPractice.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,11 +95,11 @@
 		101B526B1D2CB4620078B950 /* Bahama */ = {
 			isa = PBXGroup;
 			children = (
+				10FD60B41D3512F300543902 /* Chapter_1-3 */,
+				10FD60B51D35134100543902 /* Chapter_4 */,
 				101B52841D2CECDB0078B950 /* Catetory */,
 				101B526F1D2CB4620078B950 /* AppDelegate.h */,
 				101B52701D2CB4620078B950 /* AppDelegate.m */,
-				101B52721D2CB4620078B950 /* ViewController.h */,
-				101B52731D2CB4620078B950 /* ViewController.m */,
 				101B52751D2CB4620078B950 /* Main.storyboard */,
 				101B52781D2CB4620078B950 /* Assets.xcassets */,
 				101B527A1D2CB4620078B950 /* LaunchScreen.storyboard */,
@@ -92,6 +126,60 @@
 			name = Catetory;
 			sourceTree = "<group>";
 		};
+		104622BB1D351A9F005773E5 /* Chapter4_AnimPractice */ = {
+			isa = PBXGroup;
+			children = (
+				104622D81D35D34E005773E5 /* Custom */,
+				104622BF1D351A9F005773E5 /* AppDelegate.h */,
+				104622C01D351A9F005773E5 /* AppDelegate.m */,
+				104622C21D351A9F005773E5 /* ViewController.h */,
+				104622C31D351A9F005773E5 /* ViewController.m */,
+				104622C51D351A9F005773E5 /* Main.storyboard */,
+				104622C81D351A9F005773E5 /* Assets.xcassets */,
+				104622CA1D351A9F005773E5 /* LaunchScreen.storyboard */,
+				104622CD1D351A9F005773E5 /* Info.plist */,
+				104622BC1D351A9F005773E5 /* Supporting Files */,
+			);
+			path = Chapter4_AnimPractice;
+			sourceTree = "<group>";
+		};
+		104622BC1D351A9F005773E5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				104622BD1D351A9F005773E5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		104622D81D35D34E005773E5 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				104622D51D35D348005773E5 /* UIView+Extension.h */,
+				104622D61D35D348005773E5 /* UIView+Extension.m */,
+				104622D21D35CD7B005773E5 /* SnowView.h */,
+				104622D31D35CD7B005773E5 /* SnowView.m */,
+			);
+			name = Custom;
+			sourceTree = "<group>";
+		};
+		10FD60B41D3512F300543902 /* Chapter_1-3 */ = {
+			isa = PBXGroup;
+			children = (
+				101B52721D2CB4620078B950 /* ViewController.h */,
+				101B52731D2CB4620078B950 /* ViewController.m */,
+			);
+			name = "Chapter_1-3";
+			sourceTree = "<group>";
+		};
+		10FD60B51D35134100543902 /* Chapter_4 */ = {
+			isa = PBXGroup;
+			children = (
+				10FD60B61D35137F00543902 /* PracticeAnimViewController.h */,
+				10FD60B71D35137F00543902 /* PracticeAnimViewController.m */,
+			);
+			name = Chapter_4;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,6 +200,23 @@
 			productReference = 101B52691D2CB4620078B950 /* Bahama.app */;
 			productType = "com.apple.product-type.application";
 		};
+		104622B91D351A9F005773E5 /* Chapter4_AnimPractice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 104622D01D351A9F005773E5 /* Build configuration list for PBXNativeTarget "Chapter4_AnimPractice" */;
+			buildPhases = (
+				104622B61D351A9F005773E5 /* Sources */,
+				104622B71D351A9F005773E5 /* Frameworks */,
+				104622B81D351A9F005773E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chapter4_AnimPractice;
+			productName = Chapter4_AnimPractice;
+			productReference = 104622BA1D351A9F005773E5 /* Chapter4_AnimPractice.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -122,6 +227,9 @@
 				ORGANIZATIONNAME = JD.K;
 				TargetAttributes = {
 					101B52681D2CB4620078B950 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					104622B91D351A9F005773E5 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -140,6 +248,7 @@
 			projectRoot = "";
 			targets = (
 				101B52681D2CB4620078B950 /* Bahama */,
+				104622B91D351A9F005773E5 /* Chapter4_AnimPractice */,
 			);
 		};
 /* End PBXProject section */
@@ -155,6 +264,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		104622B81D351A9F005773E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				104622CC1D351A9F005773E5 /* LaunchScreen.storyboard in Resources */,
+				104622C91D351A9F005773E5 /* Assets.xcassets in Resources */,
+				104622C71D351A9F005773E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -165,7 +284,20 @@
 				101B52741D2CB4620078B950 /* ViewController.m in Sources */,
 				101B52711D2CB4620078B950 /* AppDelegate.m in Sources */,
 				101B52871D2CED3A0078B950 /* UIView+Extension.m in Sources */,
+				10FD60B81D35137F00543902 /* PracticeAnimViewController.m in Sources */,
 				101B526E1D2CB4620078B950 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		104622B61D351A9F005773E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				104622D71D35D348005773E5 /* UIView+Extension.m in Sources */,
+				104622C41D351A9F005773E5 /* ViewController.m in Sources */,
+				104622C11D351A9F005773E5 /* AppDelegate.m in Sources */,
+				104622BE1D351A9F005773E5 /* main.m in Sources */,
+				104622D41D35CD7B005773E5 /* SnowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +316,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				101B527B1D2CB4620078B950 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		104622C51D351A9F005773E5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				104622C61D351A9F005773E5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		104622CA1D351A9F005773E5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				104622CB1D351A9F005773E5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -295,6 +443,28 @@
 			};
 			name = Release;
 		};
+		104622CE1D351A9F005773E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter4_AnimPractice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter4-AnimPractice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		104622CF1D351A9F005773E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter4_AnimPractice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter4-AnimPractice";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -315,6 +485,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		104622D01D351A9F005773E5 /* Build configuration list for PBXNativeTarget "Chapter4_AnimPractice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				104622CE1D351A9F005773E5 /* Debug */,
+				104622CF1D351A9F005773E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
