@@ -102,6 +102,8 @@ typedef enum : NSInteger {
         
         CGPoint offsetArrive = CGPointMake(0.0, direction * 50.0);
         [self moveLabel:self.arrivingTo text:data[@"arrivingTo"] offset:offsetArrive];
+        
+        [self cubeTransition:self.flightStatus text:data[@"flightStatus"] direction:direction];
     }else{
         self.bgImageView.image = [UIImage imageNamed:data[@"weatherImageName"]];
         self.snowView.hidden = ![data[@"showWeatherEffects"] intValue];
@@ -111,13 +113,12 @@ typedef enum : NSInteger {
         
         self.departingFrom.text = data[@"departingFrom"];
         self.arrivingTo.text = data[@"arrivingTo"];
+        
+        self.flightStatus.text = data[@"flightStatus"];
     }
     
     self.summary.text = data[@"summary"];
-    self.flightStatus.text = data[@"flightStatus"];
 
-
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self changeFlightDataTo:[data[@"isTakingOff"] intValue]?self.parisToRome:self.londonToParis animated:YES];
     });
