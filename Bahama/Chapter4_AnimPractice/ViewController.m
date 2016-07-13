@@ -10,6 +10,11 @@
 #import "SnowView.h"
 #import "UIView+Extension.h"
 
+typedef enum : NSInteger {
+    Positive = 1,
+    Negative = -1
+} AnimationDirection;
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flightNr;
 @property (weak, nonatomic) IBOutlet UILabel *gateNr;
@@ -41,7 +46,7 @@
                            @"departingFrom" : @"LGW",
                            @"arrivingTo" : @"CDG",
                            @"weatherImageName" : @"bg-snowy",
-                           @"showWeatherEffects" : @"0",
+                           @"showWeatherEffects" : @"1",
                            @"isTakingOff" : @"1",
                            @"flightStatus" : @"Boarding"
                            };
@@ -59,7 +64,7 @@
                          @"departingFrom" : @"CDG",
                          @"arrivingTo" : @"FCO",
                          @"weatherImageName" : @"bg-sunny",
-                         @"showWeatherEffects" : @"1",
+                         @"showWeatherEffects" : @"0",
                          @"isTakingOff" : @"0",
                          @"flightStatus" : @"Delayed"
                          };
@@ -80,23 +85,109 @@
     [snowClipView addSubview:snow];
     [self.view addSubview:snowClipView];
     
-    [self changeFlightDataTo:self.londonToParis];
+    [self changeFlightDataTo:self.londonToParis animated:NO];
 }
 
-- (void)changeFlightDataTo:(NSDictionary *)data
+- (void)changeFlightDataTo:(NSDictionary *)data animated:(BOOL)animated
 {
+    if (animated) {
+        [self fadeImageView:self.bgImageView image:[UIImage imageNamed:data[@"weatherImageName"]] showEffects:[data[@"showWeatherEffects"] intValue]];
+        
+        AnimationDirection direction = [data[@"isTakingOff"] intValue] ? Positive : Negative;
+        [self cubeTransition:self.flightNr text:data[@"flightNr"] direction:direction];
+        [self cubeTransition:self.gateNr text:data[@"gateNr"] direction:direction];
+        
+        CGPoint offsetDepart = CGPointMake(direction * 80.0, 0.0);
+        [self moveLabel:self.departingFrom text:data[@"departingFrom"] offset:offsetDepart];
+        
+        CGPoint offsetArrive = CGPointMake(0.0, direction * 50.0);
+        [self moveLabel:self.arrivingTo text:data[@"arrivingTo"] offset:offsetArrive];
+    }else{
+        self.bgImageView.image = [UIImage imageNamed:data[@"weatherImageName"]];
+        self.snowView.hidden = ![data[@"showWeatherEffects"] intValue];
+    
+        self.flightNr.text = data[@"flightNr"];
+        self.gateNr.text = data[@"gateNr"];
+        
+        self.departingFrom.text = data[@"departingFrom"];
+        self.arrivingTo.text = data[@"arrivingTo"];
+    }
+    
     self.summary.text = data[@"summary"];
-    self.flightNr.text = data[@"flightNr"];
-    self.gateNr.text = data[@"gateNr"];
-    self.departingFrom.text = data[@"departingFrom"];
-    self.arrivingTo.text = data[@"arrivingTo"];
     self.flightStatus.text = data[@"flightStatus"];
-    self.bgImageView.image = [UIImage imageNamed:data[@"weatherImageName"]];
-    self.snowView.hidden = [data[@"showWeatherEffects"] intValue];
+
+
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self changeFlightDataTo:[data[@"isTakingOff"] intValue]?self.parisToRome:self.londonToParis];
+        [self changeFlightDataTo:[data[@"isTakingOff"] intValue]?self.parisToRome:self.londonToParis animated:YES];
     });
+}
+
+- (void)fadeImageView:(UIImageView *)imageView image:(UIImage *)image showEffects:(BOOL)showEffects
+{
+    [UIView transitionWithView:imageView duration:1.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        imageView.image = image;
+    } completion:nil];
+    [UIView animateWithDuration:1.0 animations:^{
+        self.snowView.alpha = showEffects ? 1.0 : 0.0;
+    }];
+}
+
+/**
+ *  Label仿3D动画
+ */
+- (void)cubeTransition:(UILabel *)label text:(NSString *)text direction:(AnimationDirection)direction
+{
+    UILabel *auxLabel = [[UILabel alloc] initWithFrame:label.frame];
+    auxLabel.text = text;
+    auxLabel.font = label.font;
+    auxLabel.textAlignment = label.textAlignment;
+    auxLabel.textColor = label.textColor;
+    auxLabel.backgroundColor = [UIColor clearColor];
+    CGFloat auxLabelOffset = direction * label.height * 0.5;
+    auxLabel.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.0, 0.1), CGAffineTransformMakeTranslation(0.0, auxLabelOffset));
+    
+    [label.superview addSubview:auxLabel];
+    
+    //动画
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+        auxLabel.transform = CGAffineTransformIdentity;
+        label.transform = CGAffineTransformConcat(CGAffineTransformMakeScale(1.0, 0.1), CGAffineTransformMakeTranslation(0.0, -auxLabelOffset));
+    } completion:^(BOOL finished) {
+        label.text = text;
+        label.transform = CGAffineTransformIdentity;
+        [auxLabel removeFromSuperview];
+    }];
+    
+}
+
+- (void)moveLabel:(UILabel *)label text:(NSString *)text offset:(CGPoint)offset
+{
+    UILabel *auxLabel = [[UILabel alloc] initWithFrame:label.frame];
+    auxLabel.text = text;
+    auxLabel.font = label.font;
+    auxLabel.textAlignment = label.textAlignment;
+    auxLabel.textColor = label.textColor;
+    auxLabel.backgroundColor = [UIColor clearColor];
+    
+    auxLabel.transform = CGAffineTransformMakeTranslation(offset.x, offset.y);
+    auxLabel.alpha = 0;
+    [label.superview addSubview:auxLabel];
+    
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        label.transform = CGAffineTransformMakeTranslation(offset.x, offset.y);
+        label.alpha = 0.0;
+    } completion:nil];
+    
+    [UIView animateWithDuration:0.25 delay:0.1 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        auxLabel.transform = CGAffineTransformIdentity;
+        auxLabel.alpha = 1.0;
+    } completion:^(BOOL finished) {
+        label.text =text;
+        label.alpha = 1.0;
+        label.transform = CGAffineTransformIdentity;
+        [auxLabel removeFromSuperview];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
