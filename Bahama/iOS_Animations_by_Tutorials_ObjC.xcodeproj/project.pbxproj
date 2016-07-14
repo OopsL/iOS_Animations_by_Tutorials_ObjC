@@ -20,6 +20,7 @@
 		102DF34E1D3729C200C545D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102DF34C1D3729C200C545D7 /* Main.storyboard */; };
 		102DF3501D3729C200C545D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102DF34F1D3729C200C545D7 /* Assets.xcassets */; };
 		102DF3531D3729C200C545D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102DF3511D3729C200C545D7 /* LaunchScreen.storyboard */; };
+		102DF35A1D3776E700C545D7 /* HorizontalItemList.m in Sources */ = {isa = PBXBuildFile; fileRef = 102DF3591D3776E700C545D7 /* HorizontalItemList.m */; };
 		104622BE1D351A9F005773E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622BD1D351A9F005773E5 /* main.m */; };
 		104622C11D351A9F005773E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622C01D351A9F005773E5 /* AppDelegate.m */; };
 		104622C41D351A9F005773E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622C31D351A9F005773E5 /* ViewController.m */; };
@@ -54,6 +55,8 @@
 		102DF34F1D3729C200C545D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		102DF3521D3729C200C545D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		102DF3541D3729C200C545D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		102DF3581D3776E700C545D7 /* HorizontalItemList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalItemList.h; sourceTree = "<group>"; };
+		102DF3591D3776E700C545D7 /* HorizontalItemList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalItemList.m; sourceTree = "<group>"; };
 		104622BA1D351A9F005773E5 /* Chapter4_AnimPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter4_AnimPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104622BD1D351A9F005773E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		104622BF1D351A9F005773E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 			children = (
 				102DF3461D3729C200C545D7 /* AppDelegate.h */,
 				102DF3471D3729C200C545D7 /* AppDelegate.m */,
+				102DF3581D3776E700C545D7 /* HorizontalItemList.h */,
+				102DF3591D3776E700C545D7 /* HorizontalItemList.m */,
 				102DF3491D3729C200C545D7 /* ViewController.h */,
 				102DF34A1D3729C200C545D7 /* ViewController.m */,
 				102DF34C1D3729C200C545D7 /* Main.storyboard */,
@@ -374,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102DF35A1D3776E700C545D7 /* HorizontalItemList.m in Sources */,
 				102DF34B1D3729C200C545D7 /* ViewController.m in Sources */,
 				102DF3481D3729C200C545D7 /* AppDelegate.m in Sources */,
 				102DF3451D3729C200C545D7 /* main.m in Sources */,

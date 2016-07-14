@@ -2,11 +2,9 @@
 //  ViewController.m
 //  Chapter_6_PackingList
 //
-//  Created by JD.K on 16/7/14.
-//  Copyright © 2016年 JD.K. All rights reserved.
-//
 
 #import "ViewController.h"
+#import "HorizontalItemList.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -14,9 +12,11 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property(nonatomic, strong) NSArray *dataArray;
-@property(nonatomic, strong) NSArray *items;
+@property(nonatomic, strong) NSMutableArray *items;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuHeightConstraint;
 @property(nonatomic, assign,getter=isMenuOpen) BOOL menuOpen;
+
+@property(nonatomic, weak) HorizontalItemList *list;
 
 @end
 
@@ -32,10 +32,10 @@
     return _dataArray;
 }
 
-- (NSArray *)items
+- (NSMutableArray *)items
 {
     if (!_items) {
-        _items = @[@5,@6,@7,];
+        _items = [NSMutableArray arrayWithObjects: @5,@6,@7, nil];
     }
     return _items;
 }
@@ -81,6 +81,19 @@
         self.addBtn.transform = CGAffineTransformMakeRotation(btnAngle);
         
     } completion:nil];
+    
+    if (self.isMenuOpen) {
+        HorizontalItemList *list = [[HorizontalItemList alloc] initWithFrame:CGRectMake(self.view.bounds.size.width, 120, self.view.bounds.size.width, 80)];
+        list.selectItem = ^(NSInteger index){
+            [self.items addObject:@(index)];
+            [self.tableView reloadData];
+            [self actionToggleMenu:nil];
+        };
+        self.list = list;
+        [self.titleLabel.superview addSubview:list];
+    }else{
+        [self.list removeFromSuperview];
+    }
     
 }
 
