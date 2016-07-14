@@ -15,6 +15,8 @@
 
 @property(nonatomic, strong) NSArray *dataArray;
 @property(nonatomic, strong) NSArray *items;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *menuHeightConstraint;
+@property(nonatomic, assign,getter=isMenuOpen) BOOL menuOpen;
 
 @end
 
@@ -43,6 +45,42 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.tableView.rowHeight = 54;
+    
+}
+- (IBAction)actionToggleMenu:(UIButton *)sender {
+    
+    self.menuOpen = !self.menuOpen;
+    
+    //改变Title constraint的值
+    for (NSLayoutConstraint *constraint in self.titleLabel.superview.constraints) {
+        NSLog(@"%@",constraint);
+        
+        if (constraint.firstItem == self.titleLabel && constraint.firstAttribute == NSLayoutAttributeCenterX) {
+            constraint.constant = self.isMenuOpen ? -100 : 0.0;
+            continue;
+        }
+        //replace constraint
+        if ([constraint.identifier isEqual: @"TitleCenterY"]) {
+            constraint.active = false;
+            NSLayoutConstraint *newConstraint = [NSLayoutConstraint constraintWithItem:self.titleLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.titleLabel.superview attribute:NSLayoutAttributeCenterY multiplier:self.isMenuOpen?0.67:1.0 constant:5.0];
+            newConstraint.identifier = @"TitleCenterY";
+            newConstraint.active = true;
+            
+            continue;
+        }
+        
+        
+    }
+    self.menuHeightConstraint.constant = self.isMenuOpen ? 200 : 60;
+    self.titleLabel.text = self.isMenuOpen ? @"Select Item" : @"Packing List";
+    
+    [UIView animateWithDuration:1.0 delay:0.0 usingSpringWithDamping:0.4 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        [self.view layoutIfNeeded];
+        
+        CGFloat btnAngle = self.isMenuOpen ? M_PI_4 : 0.0;
+        self.addBtn.transform = CGAffineTransformMakeRotation(btnAngle);
+        
+    } completion:nil];
     
 }
 

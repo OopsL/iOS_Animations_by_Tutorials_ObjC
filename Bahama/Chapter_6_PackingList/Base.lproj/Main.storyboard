@@ -21,25 +21,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Packing List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNx-m4-I8b">
-                                        <rect key="frame" x="243" y="17" width="113" height="25.5"/>
+                                        <rect key="frame" x="243" y="22" width="113" height="25.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qt-CS-DLn">
-                                        <rect key="frame" x="562" y="7" width="30" height="45"/>
+                                        <rect key="frame" x="562" y="13" width="30" height="45"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <state key="normal" title="+"/>
+                                        <connections>
+                                            <action selector="actionToggleMenu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3x-XL-wIZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="1qt-CS-DLn" secondAttribute="trailing" constant="8" id="1cg-Am-GoN"/>
-                                    <constraint firstItem="zNx-m4-I8b" firstAttribute="centerY" secondItem="u18-h3-r4V" secondAttribute="centerY" id="8Fq-Tt-UDi"/>
+                                    <constraint firstItem="zNx-m4-I8b" firstAttribute="centerY" secondItem="u18-h3-r4V" secondAttribute="centerY" constant="5" identifier="TitleCenterY" id="8Fq-Tt-UDi"/>
                                     <constraint firstAttribute="height" constant="60" id="Qbn-fQ-bH1"/>
                                     <constraint firstItem="zNx-m4-I8b" firstAttribute="centerX" secondItem="u18-h3-r4V" secondAttribute="centerX" id="Qo2-ft-AOt"/>
                                     <constraint firstItem="1qt-CS-DLn" firstAttribute="centerY" secondItem="u18-h3-r4V" secondAttribute="centerY" id="b2O-ht-2Uf"/>
+                                    <constraint firstItem="1qt-CS-DLn" firstAttribute="centerY" secondItem="zNx-m4-I8b" secondAttribute="centerY" id="bK7-ea-BAa"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="b2O-ht-2Uf"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5xN-W2-aX7">
                                 <rect key="frame" x="0.0" y="60" width="600" height="540"/>
@@ -73,6 +82,7 @@
                     </view>
                     <connections>
                         <outlet property="addBtn" destination="1qt-CS-DLn" id="R5B-QX-vep"/>
+                        <outlet property="menuHeightConstraint" destination="Qbn-fQ-bH1" id="HkG-cg-qhi"/>
                         <outlet property="tableView" destination="5xN-W2-aX7" id="6kD-fD-S6c"/>
                         <outlet property="titleLabel" destination="zNx-m4-I8b" id="whN-y1-nxo"/>
                     </connections>
