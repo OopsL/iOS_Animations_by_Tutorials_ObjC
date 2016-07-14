@@ -91,6 +91,9 @@ typedef enum : NSInteger {
 - (void)changeFlightDataTo:(NSDictionary *)data animated:(BOOL)animated
 {
     if (animated) {
+        
+        [self planeAnimation];
+        
         [self fadeImageView:self.bgImageView image:[UIImage imageNamed:data[@"weatherImageName"]] showEffects:[data[@"showWeatherEffects"] intValue]];
         
         AnimationDirection direction = [data[@"isTakingOff"] intValue] ? Positive : Negative;
@@ -189,6 +192,39 @@ typedef enum : NSInteger {
         label.transform = CGAffineTransformIdentity;
         [auxLabel removeFromSuperview];
     }];
+}
+
+- (void)planeAnimation
+{
+    CGPoint planeCenter = self.planeImage.center;
+    [UIView animateKeyframesWithDuration:1.5 delay:0.0 options:0 animations:^{
+        
+        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.25 animations:^{
+            self.planeImage.centerX += 80.0;
+            self.planeImage.centerY -= 10.0;
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.1 relativeDuration:0.4 animations:^{
+            self.planeImage.transform = CGAffineTransformMakeRotation(-M_PI_4 * 0.5);
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.25 relativeDuration:0.25 animations:^{
+            self.planeImage.centerX += 100.0;
+            self.planeImage.centerY -= 50.0;
+            self.planeImage.alpha = 0.0;
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.51 relativeDuration:0.01 animations:^{
+            self.planeImage.transform = CGAffineTransformIdentity;
+            self.planeImage.center = CGPointMake(0.0, planeCenter.y);
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.55 relativeDuration:0.45 animations:^{
+            self.planeImage.center = planeCenter;
+            self.planeImage.alpha = 1.0;
+        }];
+        
+    } completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
