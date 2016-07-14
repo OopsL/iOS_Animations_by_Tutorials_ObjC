@@ -120,6 +120,14 @@
         conWidth.constant = 0.0;
         [self.view layoutIfNeeded];
     } completion:nil];
+    
+    [UIView animateWithDuration:0.8 delay:1.0 usingSpringWithDamping:0.4 initialSpringVelocity:0.0 options:0 animations:^{
+        conBottom.constant = imageView.frame.size.height;
+        conWidth.constant = -50.0;
+        [self.view layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        [imageView removeFromSuperview];
+    }];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
