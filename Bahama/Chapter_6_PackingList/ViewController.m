@@ -97,6 +97,31 @@
     
 }
 
+- (void)showItem:(NSInteger)index
+{
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:[NSString stringWithFormat:@"summericons_100px_0%zd",index]]];
+    imageView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    imageView.layer.cornerRadius = 5.0;
+    imageView.layer.masksToBounds = YES;
+    imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:imageView];
+    
+    //添加约束
+    NSLayoutConstraint *conX = [imageView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor];
+    NSLayoutConstraint *conBottom = [imageView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor constant:imageView.frame.size.height];
+    NSLayoutConstraint *conWidth = [imageView.widthAnchor constraintEqualToAnchor:self.view.widthAnchor multiplier:0.33 constant:-50];
+    NSLayoutConstraint *conHeight = [imageView.heightAnchor constraintEqualToAnchor:imageView.widthAnchor];
+    [NSLayoutConstraint activateConstraints:@[conX,conBottom,conWidth,conHeight]];
+    
+    [self.view layoutIfNeeded];
+    
+    [UIView animateWithDuration:0.8 delay:0.0 usingSpringWithDamping:0.4 initialSpringVelocity:0.0 options:0 animations:^{
+        conBottom.constant = -imageView.frame.size.height * 0.5;
+        conWidth.constant = 0.0;
+        [self.view layoutIfNeeded];
+    } completion:nil];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -119,6 +144,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self showItem:indexPath.row];
 }
 
 - (void)didReceiveMemoryWarning {

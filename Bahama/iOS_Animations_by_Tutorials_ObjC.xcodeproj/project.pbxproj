@@ -105,7 +105,7 @@
 			children = (
 				101B526B1D2CB4620078B950 /* bahama */,
 				104622BB1D351A9F005773E5 /* Chapter4_5_AnimPractice */,
-				102DF3421D3729C200C545D7 /* Chapter_6_PackingList */,
+				102DF3421D3729C200C545D7 /* Chapter_6_7_PackingList */,
 				101B526A1D2CB4620078B950 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -154,7 +154,7 @@
 			name = Catetory;
 			sourceTree = "<group>";
 		};
-		102DF3421D3729C200C545D7 /* Chapter_6_PackingList */ = {
+		102DF3421D3729C200C545D7 /* Chapter_6_7_PackingList */ = {
 			isa = PBXGroup;
 			children = (
 				102DF3461D3729C200C545D7 /* AppDelegate.h */,
@@ -169,6 +169,7 @@
 				102DF3541D3729C200C545D7 /* Info.plist */,
 				102DF3431D3729C200C545D7 /* Supporting Files */,
 			);
+			name = Chapter_6_7_PackingList;
 			path = Chapter_6_PackingList;
 			sourceTree = "<group>";
 		};
