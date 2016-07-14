@@ -94,6 +94,8 @@ typedef enum : NSInteger {
         
         [self planeAnimation];
         
+        [self summarySwitchTo:data[@"summary"]];
+        
         [self fadeImageView:self.bgImageView image:[UIImage imageNamed:data[@"weatherImageName"]] showEffects:[data[@"showWeatherEffects"] intValue]];
         
         AnimationDirection direction = [data[@"isTakingOff"] intValue] ? Positive : Negative;
@@ -118,9 +120,10 @@ typedef enum : NSInteger {
         self.arrivingTo.text = data[@"arrivingTo"];
         
         self.flightStatus.text = data[@"flightStatus"];
+        
+         self.summary.text = data[@"summary"];
     }
     
-    self.summary.text = data[@"summary"];
 
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self changeFlightDataTo:[data[@"isTakingOff"] intValue]?self.parisToRome:self.londonToParis animated:YES];
@@ -225,6 +228,26 @@ typedef enum : NSInteger {
         }];
         
     } completion:nil];
+}
+
+- (void)summarySwitchTo:(NSString *)summaryText
+{
+    [UIView animateKeyframesWithDuration:1.0 delay:0.0 options:0 animations:^{
+        
+        [UIView addKeyframeWithRelativeStartTime:0.0 relativeDuration:0.45 animations:^{
+            self.summary.centerY -= 100.0;
+        }];
+        
+        [UIView addKeyframeWithRelativeStartTime:0.5 relativeDuration:0.45 animations:^{
+            self.summary.centerY += 100.0;
+        }];
+        
+    } completion:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.summary.text = summaryText;
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning {
