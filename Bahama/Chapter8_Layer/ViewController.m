@@ -65,9 +65,9 @@
 {
     [super viewWillAppear:animated];
     
-    self.titleLabel.centerX -= self.view.bounds.size.width;
-    self.userName.centerX -= self.view.bounds.size.width;
-    self.password.centerX -= self.view.bounds.size.width;
+//    self.titleLabel.centerX -= self.view.bounds.size.width;
+//    self.userName.centerX -= self.view.bounds.size.width;
+//    self.password.centerX -= self.view.bounds.size.width;
     
     self.cloud1.alpha = 0.0;
     self.cloud2.alpha = 0.0;
@@ -77,23 +77,53 @@
     self.loginBtn.centerY += 30.0;
     self.loginBtn.alpha = 0.0;
     
+    NSLog(@"%f",self.userName.layer.position.x);
+    CGPoint position1 = self.userName.layer.position;
+    position1.x -= self.view.bounds.size.width;
+    self.userName.layer.position = position1;
+    
+    CGPoint position2 = self.password.layer.position;
+    position2.x -= self.view.bounds.size.width;
+    self.password.layer.position = position2;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    [UIView animateWithDuration:0.5 animations:^{
-        self.titleLabel.centerX += self.view.bounds.size.width;
-    }];
+//    [UIView animateWithDuration:0.5 animations:^{
+//        self.titleLabel.centerX += self.view.bounds.size.width;
+//    }];
+//    
+//    [UIView animateWithDuration:0.5 delay:0.3 usingSpringWithDamping:0.6 initialSpringVelocity:0.0 options:0 animations:^{
+//        self.userName.centerX += self.view.bounds.size.width;
+//    } completion:nil];
+//    
+//    [UIView animateWithDuration:0.5 delay:0.4 usingSpringWithDamping:0.6 initialSpringVelocity:0.0 options:0 animations:^{
+//        self.password.centerX += self.view.bounds.size.width;
+//    } completion:nil];
     
-    [UIView animateWithDuration:0.5 delay:0.3 usingSpringWithDamping:0.6 initialSpringVelocity:0.0 options:0 animations:^{
-        self.userName.centerX += self.view.bounds.size.width;
-    } completion:nil];
+    CABasicAnimation *flightRight = [CABasicAnimation animationWithKeyPath:@"position.x"];
+    flightRight.fromValue = @(-self.view.bounds.size.width * 0.5);
+    flightRight.toValue = @(self.view.bounds.size.width * 0.5);
+    flightRight.duration = 0.5;
+    flightRight.fillMode = kCAFillModeBoth;
+//    flightRight.removedOnCompletion = false;
+    [self.titleLabel.layer addAnimation:flightRight forKey:nil];
     
-    [UIView animateWithDuration:0.5 delay:0.4 usingSpringWithDamping:0.6 initialSpringVelocity:0.0 options:0 animations:^{
-        self.password.centerX += self.view.bounds.size.width;
-    } completion:nil];
+    flightRight.beginTime = CACurrentMediaTime() + 0.3;
+    [self.userName.layer addAnimation:flightRight forKey:nil];
+    CGPoint position1 = self.userName.layer.position;
+    position1.x = self.view.bounds.size.width * 0.5;
+    self.userName.layer.position = position1;
+
+    
+    flightRight.beginTime = CACurrentMediaTime() + 0.4;
+    [self.password.layer addAnimation:flightRight forKey:nil];
+    
+    CGPoint position2 = self.password.layer.position;
+    position2.x = self.view.bounds.size.width * 0.5;
+    self.password.layer.position = position2;
     
     [UIView animateWithDuration:0.5 delay:0.5 options:0 animations:^{
         self.cloud1.alpha = 1.0;
