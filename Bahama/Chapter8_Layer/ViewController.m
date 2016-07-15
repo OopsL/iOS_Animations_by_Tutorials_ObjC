@@ -22,6 +22,7 @@
 @property(nonatomic, weak) UIImageView *status;
 @property(nonatomic, weak) UILabel *statusLabel;
 @property(nonatomic, strong) NSArray *messages;
+@property(nonatomic, weak) UILabel *flyInfo;
 @end
 
 @implementation ViewController
@@ -59,6 +60,15 @@
     statusLabel.textAlignment = NSTextAlignmentCenter;
     self.statusLabel = statusLabel;
     [status addSubview:statusLabel];
+    
+    UILabel *flyInfo = [[UILabel alloc] initWithFrame:CGRectMake(0.0, self.loginBtn.centerY + 60, self.view.bounds.size.width, 30)];
+    flyInfo.font = [UIFont fontWithName:@"HelveticaNeue" size:12];
+    flyInfo.backgroundColor = [UIColor clearColor];
+    flyInfo.textAlignment = NSTextAlignmentCenter;
+    flyInfo.textColor = [UIColor whiteColor];
+    flyInfo.text = @"Tap on a field and enter username and password";
+    self.flyInfo = flyInfo;
+    [self.view addSubview:flyInfo];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -125,9 +135,14 @@
     flightRight.duration = 0.5;
     flightRight.fillMode = kCAFillModeBoth;
 //    flightRight.removedOnCompletion = false;
+    
+    flightRight.delegate = self;
+    [flightRight setValue:@"form" forKey:@"name"];
+    [flightRight setValue:self.titleLabel.layer forKey:@"layer"];
     [self.titleLabel.layer addAnimation:flightRight forKey:nil];
     
     flightRight.beginTime = CACurrentMediaTime() + 0.3;
+    [flightRight setValue:self.userName.layer forKey:@"layer"];
     [self.userName.layer addAnimation:flightRight forKey:nil];
     CGPoint position1 = self.userName.layer.position;
     position1.x = self.view.bounds.size.width * 0.5;
@@ -135,6 +150,7 @@
 
     
     flightRight.beginTime = CACurrentMediaTime() + 0.4;
+    [flightRight setValue:self.password.layer forKey:@"layer"];
     [self.password.layer addAnimation:flightRight forKey:nil];
     
     CGPoint position2 = self.password.layer.position;
@@ -163,6 +179,20 @@
     [self animateCloud:_cloud2];
     [self animateCloud:_cloud3];
     [self animateCloud:_cloud4];
+    
+    CABasicAnimation *flyLeft = [CABasicAnimation animationWithKeyPath:@"position.x"];
+    flyLeft.fromValue = @(self.flyInfo.layer.position.x + self.view.bounds.size.width);
+    flyLeft.toValue = @(self.flyInfo.layer.position.x);
+//    flyLeft.fillMode = kCAFillModeBackwards;
+    flyLeft.duration = 5.0;
+    [self.flyInfo.layer addAnimation:flyLeft forKey:@"infoAppear"];
+    
+    
+    CABasicAnimation *fadeLabelIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fadeLabelIn.fromValue = @(0.2);
+    fadeLabelIn.toValue = @(1.0);
+    fadeLabelIn.duration = 4.5;
+    [self.flyInfo.layer addAnimation:fadeLabelIn forKey:@"fadeIn"];
 }
 
 - (void)animateCloud:(UIImageView *)cloud
@@ -264,6 +294,27 @@
     [layer addAnimation:cornerRadiusAnim forKey:nil];
     
     layer.cornerRadius = radius;
+}
+
+- (void)animationDidStart:(CAAnimation *)anim
+{
+    
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    NSString *name = [anim valueForKey:@"name"];
+    if (name.length && [name isEqualToString:@"form"]) {
+        CALayer *layer = [anim valueForKey:@"layer"];
+        if (layer) {
+            [anim setValue:nil forKey:@"layer"];
+            CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+            scaleAnim.fromValue = @(1.25);
+            scaleAnim.toValue = @(1.0);
+            scaleAnim.duration = 0.25;
+            [layer addAnimation:scaleAnim forKey:nil];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {
