@@ -41,7 +41,7 @@
 
 - (CGFloat)width
 {
-    return self.frame.size.width;
+    return self.bounds.size.width;
 }
 
 - (void)setHeight:(CGFloat)height
