@@ -37,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.loginBtn.layer.cornerRadius = 5.0;
+    self.loginBtn.layer.cornerRadius = 8.0;
     self.loginBtn.layer.masksToBounds = YES;
     self.btnCenter = self.loginBtn.center;
     
@@ -69,15 +69,14 @@
 //    self.userName.centerX -= self.view.bounds.size.width;
 //    self.password.centerX -= self.view.bounds.size.width;
     
-    self.cloud1.alpha = 0.0;
-    self.cloud2.alpha = 0.0;
-    self.cloud3.alpha = 0.0;
-    self.cloud4.alpha = 0.0;
+//    self.cloud1.alpha = 0.0;
+//    self.cloud2.alpha = 0.0;
+//    self.cloud3.alpha = 0.0;
+//    self.cloud4.alpha = 0.0;
     
     self.loginBtn.centerY += 30.0;
     self.loginBtn.alpha = 0.0;
     
-    NSLog(@"%f",self.userName.layer.position.x);
     CGPoint position1 = self.userName.layer.position;
     position1.x -= self.view.bounds.size.width;
     self.userName.layer.position = position1;
@@ -85,6 +84,23 @@
     CGPoint position2 = self.password.layer.position;
     position2.x -= self.view.bounds.size.width;
     self.password.layer.position = position2;
+    
+    CABasicAnimation *cloudAnim = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    cloudAnim.fromValue = @(0.0);
+    cloudAnim.toValue = @(1.0);
+    cloudAnim.duration = 0.5;
+    cloudAnim.fillMode = kCAFillModeBackwards;
+    cloudAnim.beginTime = CACurrentMediaTime() + 0.5;
+    [self.cloud1.layer addAnimation:cloudAnim forKey:nil];
+    
+    cloudAnim.beginTime = CACurrentMediaTime() + 0.7;
+    [self.cloud2.layer addAnimation:cloudAnim forKey:nil];
+    
+    cloudAnim.beginTime = CACurrentMediaTime() + 0.9;
+    [self.cloud3.layer addAnimation:cloudAnim forKey:nil];
+    
+    cloudAnim.beginTime = CACurrentMediaTime() + 1.1;
+    [self.cloud4.layer addAnimation:cloudAnim forKey:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -124,19 +140,19 @@
     CGPoint position2 = self.password.layer.position;
     position2.x = self.view.bounds.size.width * 0.5;
     self.password.layer.position = position2;
-    
-    [UIView animateWithDuration:0.5 delay:0.5 options:0 animations:^{
-        self.cloud1.alpha = 1.0;
-    } completion:nil];
-    [UIView animateWithDuration:0.5 delay:0.7 options:0 animations:^{
-        self.cloud2.alpha = 1.0;
-    } completion:nil];
-    [UIView animateWithDuration:0.5 delay:0.9 options:0 animations:^{
-        self.cloud3.alpha = 1.0;
-    } completion:nil];
-    [UIView animateWithDuration:0.5 delay:1.1 options:0 animations:^{
-        self.cloud4.alpha = 1.0;
-    } completion:nil];
+//    
+//    [UIView animateWithDuration:0.5 delay:0.5 options:0 animations:^{
+//        self.cloud1.alpha = 1.0;
+//    } completion:nil];
+//    [UIView animateWithDuration:0.5 delay:0.7 options:0 animations:^{
+//        self.cloud2.alpha = 1.0;
+//    } completion:nil];
+//    [UIView animateWithDuration:0.5 delay:0.9 options:0 animations:^{
+//        self.cloud3.alpha = 1.0;
+//    } completion:nil];
+//    [UIView animateWithDuration:0.5 delay:1.1 options:0 animations:^{
+//        self.cloud4.alpha = 1.0;
+//    } completion:nil];
     
     [UIView animateWithDuration:0.5 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:0 animations:^{
         self.loginBtn.centerY -= 30.0;
@@ -168,13 +184,15 @@
     
     [UIView animateWithDuration:0.33 delay:0.0 usingSpringWithDamping:0.7 initialSpringVelocity:0.0 options:0 animations:^{
         self.loginBtn.centerY += 60.0;
-        self.loginBtn.backgroundColor = [UIColor colorWithRed:0.85 green:0.83 blue:0.45 alpha:1.0];
-        
+//        self.loginBtn.backgroundColor = [UIColor colorWithRed:0.85 green:0.83 blue:0.45 alpha:1.0];
+        [self tintBackgroundColor:self.loginBtn.layer backgroundColor:[UIColor colorWithRed:0.85 green:0.83 blue:0.45 alpha:1.0]];
         self.indicator.alpha = 1.0;
         self.indicator.center = CGPointMake(40, self.loginBtn.frame.size.height * 0.5);
     } completion:^(BOOL finished) {
         [self showMessage:0];
     }];
+    
+    [self cornerRadius:self.loginBtn.layer radius:self.loginBtn.height * 0.5];
 }
 
 - (void)showMessage:(NSInteger)index
@@ -215,10 +233,37 @@
     [UIView animateWithDuration:0.2 delay:0.0 options:0 animations:^{
         self.indicator.center = CGPointMake(-25, 16);
         self.indicator.alpha = 0.0;
-        self.loginBtn.backgroundColor = [UIColor colorWithRed:0.63 green:0.84 blue:0.35 alpha:1.0];
+//        self.loginBtn.backgroundColor = [UIColor colorWithRed:0.63 green:0.84 blue:0.35 alpha:1.0];
+        [self tintBackgroundColor:self.loginBtn.layer backgroundColor:[UIColor colorWithRed:0.63 green:0.84 blue:0.35 alpha:1.0]];
+        
+        [self cornerRadius:self.loginBtn.layer radius:8.0];
         self.loginBtn.width -= 80.0;
         self.loginBtn.centerY -= 60.0;
     } completion:nil];
+   
+}
+
+
+- (void)tintBackgroundColor:(CALayer *)layer backgroundColor:(UIColor *)color
+{
+    CABasicAnimation *colorAnim = [CABasicAnimation animationWithKeyPath:@"backgroundColor"];
+    colorAnim.fromValue = (__bridge id _Nullable)(layer.backgroundColor);
+    colorAnim.toValue = (__bridge id _Nullable)(color.CGColor);
+    colorAnim.duration = 1.0;
+    [layer addAnimation:colorAnim forKey:nil];
+    
+    layer.backgroundColor = color.CGColor;
+}
+
+- (void)cornerRadius:(CALayer *)layer radius:(CGFloat)radius
+{
+    CABasicAnimation *cornerRadiusAnim = [CABasicAnimation animationWithKeyPath:@"cornerRadius"];
+    cornerRadiusAnim.fromValue = @(layer.cornerRadius);
+    cornerRadiusAnim.toValue = @(radius);
+    cornerRadiusAnim.duration = 0.33;
+    [layer addAnimation:cornerRadiusAnim forKey:nil];
+    
+    layer.cornerRadius = radius;
 }
 
 - (void)didReceiveMemoryWarning {
