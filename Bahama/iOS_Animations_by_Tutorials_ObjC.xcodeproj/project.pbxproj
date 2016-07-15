@@ -36,6 +36,13 @@
 		104622CC1D351A9F005773E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104622CA1D351A9F005773E5 /* LaunchScreen.storyboard */; };
 		104622D41D35CD7B005773E5 /* SnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622D31D35CD7B005773E5 /* SnowView.m */; };
 		104622D71D35D348005773E5 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622D61D35D348005773E5 /* UIView+Extension.m */; };
+		105659C71D38B7DC00535C35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 105659C61D38B7DC00535C35 /* main.m */; };
+		105659DC1D38B82600535C35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 105659DB1D38B82600535C35 /* ViewController.m */; };
+		105659DF1D38B88C00535C35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 105659DE1D38B88C00535C35 /* AppDelegate.m */; };
+		105659E91D38B89800535C35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 105659E01D38B89800535C35 /* Assets.xcassets */; };
+		105659EA1D38B89800535C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105659E21D38B89800535C35 /* LaunchScreen.storyboard */; };
+		105659EB1D38B89800535C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105659E41D38B89800535C35 /* Main.storyboard */; };
+		105659EC1D38B89800535C35 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 105659E81D38B89800535C35 /* UIView+Extension.m */; };
 		10FD60B81D35137F00543902 /* PracticeAnimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD60B71D35137F00543902 /* PracticeAnimViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +97,18 @@
 		104622D31D35CD7B005773E5 /* SnowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowView.m; sourceTree = "<group>"; };
 		104622D51D35D348005773E5 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		104622D61D35D348005773E5 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		105659C31D38B7DC00535C35 /* Chapter_1_3_Bahama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter_1_3_Bahama.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		105659C61D38B7DC00535C35 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		105659D61D38B7DC00535C35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		105659DA1D38B82600535C35 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		105659DB1D38B82600535C35 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		105659DD1D38B88C00535C35 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		105659DE1D38B88C00535C35 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		105659E01D38B89800535C35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		105659E31D38B89800535C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		105659E51D38B89800535C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		105659E71D38B89800535C35 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		105659E81D38B89800535C35 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		10FD60B61D35137F00543902 /* PracticeAnimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeAnimViewController.h; sourceTree = "<group>"; };
 		10FD60B71D35137F00543902 /* PracticeAnimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeAnimViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +142,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		105659C01D38B7DC00535C35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -130,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				101B526B1D2CB4620078B950 /* bahama_autoLayout */,
+				105659C41D38B7DC00535C35 /* Chapter_1_3_Bahama */,
 				104622BB1D351A9F005773E5 /* Chapter4_5_AnimPractice */,
 				102DF3421D3729C200C545D7 /* Chapter_6_7_PackingList */,
 				102DF3621D37B2C400C545D7 /* Chapter8_Layer */,
@@ -144,6 +171,7 @@
 				104622BA1D351A9F005773E5 /* Chapter4_AnimPractice.app */,
 				102DF3411D3729C200C545D7 /* Chapter_6_PackingList.app */,
 				102DF3611D37B2C400C545D7 /* Chapter8_Layer.app */,
+				105659C31D38B7DC00535C35 /* Chapter_1_3_Bahama.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +309,48 @@
 			name = Custom;
 			sourceTree = "<group>";
 		};
+		105659C41D38B7DC00535C35 /* Chapter_1_3_Bahama */ = {
+			isa = PBXGroup;
+			children = (
+				105659E61D38B89800535C35 /* Categary */,
+				105659DD1D38B88C00535C35 /* AppDelegate.h */,
+				105659DE1D38B88C00535C35 /* AppDelegate.m */,
+				105659DA1D38B82600535C35 /* ViewController.h */,
+				105659DB1D38B82600535C35 /* ViewController.m */,
+				105659D61D38B7DC00535C35 /* Info.plist */,
+				105659E11D38B89800535C35 /* Base.lproj */,
+				105659E01D38B89800535C35 /* Assets.xcassets */,
+				105659C51D38B7DC00535C35 /* Supporting Files */,
+			);
+			path = Chapter_1_3_Bahama;
+			sourceTree = "<group>";
+		};
+		105659C51D38B7DC00535C35 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				105659C61D38B7DC00535C35 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		105659E11D38B89800535C35 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				105659E21D38B89800535C35 /* LaunchScreen.storyboard */,
+				105659E41D38B89800535C35 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		105659E61D38B89800535C35 /* Categary */ = {
+			isa = PBXGroup;
+			children = (
+				105659E71D38B89800535C35 /* UIView+Extension.h */,
+				105659E81D38B89800535C35 /* UIView+Extension.m */,
+			);
+			path = Categary;
+			sourceTree = "<group>";
+		};
 		10FD60B41D3512F300543902 /* Chapter_1-3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +440,23 @@
 			productReference = 104622BA1D351A9F005773E5 /* Chapter4_AnimPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
+		105659C21D38B7DC00535C35 /* Chapter_1_3_Bahama */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 105659D91D38B7DC00535C35 /* Build configuration list for PBXNativeTarget "Chapter_1_3_Bahama" */;
+			buildPhases = (
+				105659BF1D38B7DC00535C35 /* Sources */,
+				105659C01D38B7DC00535C35 /* Frameworks */,
+				105659C11D38B7DC00535C35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chapter_1_3_Bahama;
+			productName = Chapter_1_3_Bahama;
+			productReference = 105659C31D38B7DC00535C35 /* Chapter_1_3_Bahama.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -391,6 +478,9 @@
 					104622B91D351A9F005773E5 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					105659C21D38B7DC00535C35 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 101B52641D2CB4620078B950 /* Build configuration list for PBXProject "iOS_Animations_by_Tutorials_ObjC" */;
@@ -410,6 +500,7 @@
 				104622B91D351A9F005773E5 /* Chapter4_AnimPractice */,
 				102DF3401D3729C200C545D7 /* Chapter_6_PackingList */,
 				102DF3601D37B2C400C545D7 /* Chapter8_Layer */,
+				105659C21D38B7DC00535C35 /* Chapter_1_3_Bahama */,
 			);
 		};
 /* End PBXProject section */
@@ -452,6 +543,16 @@
 				104622CC1D351A9F005773E5 /* LaunchScreen.storyboard in Resources */,
 				104622C91D351A9F005773E5 /* Assets.xcassets in Resources */,
 				104622C71D351A9F005773E5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		105659C11D38B7DC00535C35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				105659EB1D38B89800535C35 /* Main.storyboard in Resources */,
+				105659E91D38B89800535C35 /* Assets.xcassets in Resources */,
+				105659EA1D38B89800535C35 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +602,17 @@
 				104622C11D351A9F005773E5 /* AppDelegate.m in Sources */,
 				104622BE1D351A9F005773E5 /* main.m in Sources */,
 				104622D41D35CD7B005773E5 /* SnowView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		105659BF1D38B7DC00535C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				105659DC1D38B82600535C35 /* ViewController.m in Sources */,
+				105659C71D38B7DC00535C35 /* main.m in Sources */,
+				105659EC1D38B89800535C35 /* UIView+Extension.m in Sources */,
+				105659DF1D38B88C00535C35 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +681,22 @@
 				104622CB1D351A9F005773E5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		105659E21D38B89800535C35 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				105659E31D38B89800535C35 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		105659E41D38B89800535C35 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				105659E51D38B89800535C35 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -744,6 +872,28 @@
 			};
 			name = Release;
 		};
+		105659D71D38B7DC00535C35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter_1_3_Bahama/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-1-3-Bahama";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		105659D81D38B7DC00535C35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter_1_3_Bahama/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-1-3-Bahama";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -791,6 +941,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		105659D91D38B7DC00535C35 /* Build configuration list for PBXNativeTarget "Chapter_1_3_Bahama" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				105659D71D38B7DC00535C35 /* Debug */,
+				105659D81D38B7DC00535C35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
