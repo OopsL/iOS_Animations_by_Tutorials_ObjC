@@ -23,6 +23,7 @@
 @property(nonatomic, weak) UILabel *statusLabel;
 @property(nonatomic, strong) NSArray *messages;
 @property(nonatomic, weak) UILabel *flyInfo;
+@property(nonatomic, weak) CALayer *balloon;
 @end
 
 @implementation ViewController
@@ -68,35 +69,16 @@
     flyInfo.textColor = [UIColor whiteColor];
     flyInfo.text = @"Tap on a field and enter username and password";
     self.flyInfo = flyInfo;
-    [self.view addSubview:flyInfo];
+    [self.view insertSubview:flyInfo belowSubview:self.loginBtn];
     
     self.userName.delegate = self;
     self.password.delegate = self;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-//    self.titleLabel.centerX -= self.view.bounds.size.width;
-//    self.userName.centerX -= self.view.bounds.size.width;
-//    self.password.centerX -= self.view.bounds.size.width;
-    
-//    self.cloud1.alpha = 0.0;
-//    self.cloud2.alpha = 0.0;
-//    self.cloud3.alpha = 0.0;
-//    self.cloud4.alpha = 0.0;
-    
-//    self.loginBtn.centerY += 30.0;
-//    self.loginBtn.alpha = 0.0;
-    
-//    CGPoint position1 = self.userName.layer.position;
-//    position1.x -= self.view.bounds.size.width;
-//    self.userName.layer.position = position1;
-//    
-//    CGPoint position2 = self.password.layer.position;
-//    position2.x -= self.view.bounds.size.width;
-//    self.password.layer.position = position2;
     
     CABasicAnimation *cloudAnim = [CABasicAnimation animationWithKeyPath:@"opacity"];
     cloudAnim.fromValue = @(0.0);
@@ -119,46 +101,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-//    [UIView animateWithDuration:0.5 animations:^{
-//        self.titleLabel.centerX += self.view.bounds.size.width;
-//    }];
-//    
-//    [UIView animateWithDuration:0.5 delay:0.3 usingSpringWithDamping:0.6 initialSpringVelocity:0.0 options:0 animations:^{
-//        self.userName.centerX += self.view.bounds.size.width;
-//    } completion:nil];
-//    
-//    [UIView animateWithDuration:0.5 delay:0.4 usingSpringWithDamping:0.6 initialSpringVelocity:0.0 options:0 animations:^{
-//        self.password.centerX += self.view.bounds.size.width;
-//    } completion:nil];
-    
-//    CABasicAnimation *flightRight = [CABasicAnimation animationWithKeyPath:@"position.x"];
-//    flightRight.fromValue = @(-self.view.bounds.size.width * 0.5);
-//    flightRight.toValue = @(self.view.bounds.size.width * 0.5);
-//    flightRight.duration = 0.5;
-//    flightRight.fillMode = kCAFillModeBoth;
-////    flightRight.removedOnCompletion = false;
-//    
-//    flightRight.delegate = self;
-//    [flightRight setValue:@"form" forKey:@"name"];
-//    [flightRight setValue:self.titleLabel.layer forKey:@"layer"];
-//    [self.titleLabel.layer addAnimation:flightRight forKey:nil];
-//    
-//    flightRight.beginTime = CACurrentMediaTime() + 0.3;
-//    [flightRight setValue:self.userName.layer forKey:@"layer"];
-//    [self.userName.layer addAnimation:flightRight forKey:nil];
-//    CGPoint position1 = self.userName.layer.position;
-//    position1.x = self.view.bounds.size.width * 0.5;
-//    self.userName.layer.position = position1;
-//
-//    
-//    flightRight.beginTime = CACurrentMediaTime() + 0.4;
-//    [flightRight setValue:self.password.layer forKey:@"layer"];
-//    [self.password.layer addAnimation:flightRight forKey:nil];
-//    
-//    CGPoint position2 = self.password.layer.position;
-//    position2.x = self.view.bounds.size.width * 0.5;
-//    self.password.layer.position = position2;
     
     CAAnimationGroup *formGroup = [[CAAnimationGroup alloc] init];
     formGroup.duration = 0.5;
@@ -186,29 +128,6 @@
     [formGroup setValue:self.password.layer forKey:@"layer"];
     [self.password.layer addAnimation:formGroup forKey:nil];
 
-//    [UIView animateWithDuration:0.5 delay:0.5 options:0 animations:^{
-//        self.cloud1.alpha = 1.0;
-//    } completion:nil];
-//    [UIView animateWithDuration:0.5 delay:0.7 options:0 animations:^{
-//        self.cloud2.alpha = 1.0;
-//    } completion:nil];
-//    [UIView animateWithDuration:0.5 delay:0.9 options:0 animations:^{
-//        self.cloud3.alpha = 1.0;
-//    } completion:nil];
-//    [UIView animateWithDuration:0.5 delay:1.1 options:0 animations:^{
-//        self.cloud4.alpha = 1.0;
-//    } completion:nil];
-    
-//    [UIView animateWithDuration:0.5 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:0 animations:^{
-//        self.loginBtn.centerY -= 30.0;
-//        self.loginBtn.alpha = 1.0;
-//    } completion:nil];
-    
-    
-//    [self animateCloud:_cloud1];
-//    [self animateCloud:_cloud2];
-//    [self animateCloud:_cloud3];
-//    [self animateCloud:_cloud4];
     [self animateCloud:_cloud1.layer];
     [self animateCloud:_cloud2.layer];
     [self animateCloud:_cloud3.layer];
@@ -237,7 +156,7 @@
     
     CAAnimationGroup *groupAnim = [[CAAnimationGroup alloc] init];
     groupAnim.beginTime = CACurrentMediaTime() + 0.5;
-    groupAnim.duration = 5;
+    groupAnim.duration = 0.5;
     groupAnim.fillMode = kCAFillModeBackwards;
     groupAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
     
@@ -257,17 +176,6 @@
     
     [self.loginBtn.layer addAnimation:groupAnim forKey:nil];
 }
-
-//- (void)animateCloud:(UIImageView *)cloud
-//{
-//    CGFloat duration = (self.view.frame.size.width - cloud.frame.origin.x)*60/self.view.frame.size.width;
-//    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
-//        cloud.originX = self.view.frame.size.width;
-//    } completion:^(BOOL finished) {
-//        cloud.originX = -cloud.frame.size.width;
-//        [self animateCloud:cloud];
-//    }];
-//}
 
 - (void)animateCloud:(CALayer *)layer
 {
@@ -298,6 +206,21 @@
     }];
     
     [self cornerRadius:self.loginBtn.layer radius:self.loginBtn.height * 0.5];
+    
+    CALayer *balloon = [CALayer layer];
+    balloon.contents = (id)[UIImage imageNamed:@"balloon"].CGImage;
+    balloon.frame = CGRectMake(-50, 0, 50, 65);
+    self.balloon = balloon;
+    [self.view.layer insertSublayer:balloon below:self.userName.layer];
+    
+    CAKeyframeAnimation *flight = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    flight.duration = 12;
+    NSValue *value1 = [NSValue valueWithCGPoint:CGPointMake(-50, 0)];
+    NSValue *value2 = [NSValue valueWithCGPoint:CGPointMake(self.view.frame.size.width + 50, 160)];
+    NSValue *value3 = [NSValue valueWithCGPoint:CGPointMake(-50, self.loginBtn.centerY)];
+    flight.values = @[value1,value2,value3];
+    flight.keyTimes = @[@(0.0),@(0.5),@(1.0)];
+    [balloon addAnimation:flight forKey:nil];
 }
 
 - (void)showMessage:(NSInteger)index
@@ -330,6 +253,13 @@
 
 - (void)resetForm
 {
+    CAKeyframeAnimation *wobble = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation"];
+    wobble.duration = 0.25;
+    wobble.values = @[@(0),@(-M_PI_4),@(0),@(M_PI_4),@(0)];
+    wobble.keyTimes = @[@(0.0),@(0.25),@(0.5),@(0.75),@(1.0)];
+    wobble.repeatCount = 4;
+    [self.titleLabel.layer addAnimation:wobble forKey:nil];
+    
     [UIView transitionWithView:self.status duration:0.2 options:UIViewAnimationOptionTransitionFlipFromTop animations:^{
         self.status.hidden = YES;
         self.status.center = self.btnCenter;

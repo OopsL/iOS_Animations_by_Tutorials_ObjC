@@ -159,7 +159,7 @@
 				105659C41D38B7DC00535C35 /* Chapter_1_3_Bahama */,
 				104622BB1D351A9F005773E5 /* Chapter4_5_AnimPractice */,
 				102DF3421D3729C200C545D7 /* Chapter_6_7_PackingList */,
-				102DF3621D37B2C400C545D7 /* Chapter8_Layer */,
+				102DF3621D37B2C400C545D7 /* Chapter8_11_Layer */,
 				101B526A1D2CB4620078B950 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		102DF3621D37B2C400C545D7 /* Chapter8_Layer */ = {
+		102DF3621D37B2C400C545D7 /* Chapter8_11_Layer */ = {
 			isa = PBXGroup;
 			children = (
 				102DF3781D38707400C545D7 /* Categary */,
@@ -252,6 +252,7 @@
 				102DF3741D37B2C400C545D7 /* Info.plist */,
 				102DF3631D37B2C400C545D7 /* Supporting Files */,
 			);
+			name = Chapter8_11_Layer;
 			path = Chapter8_Layer;
 			sourceTree = "<group>";
 		};
@@ -949,6 +950,7 @@
 				105659D81D38B7DC00535C35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
