@@ -87,16 +87,16 @@
 //    self.cloud3.alpha = 0.0;
 //    self.cloud4.alpha = 0.0;
     
-    self.loginBtn.centerY += 30.0;
-    self.loginBtn.alpha = 0.0;
+//    self.loginBtn.centerY += 30.0;
+//    self.loginBtn.alpha = 0.0;
     
-    CGPoint position1 = self.userName.layer.position;
-    position1.x -= self.view.bounds.size.width;
-    self.userName.layer.position = position1;
-    
-    CGPoint position2 = self.password.layer.position;
-    position2.x -= self.view.bounds.size.width;
-    self.password.layer.position = position2;
+//    CGPoint position1 = self.userName.layer.position;
+//    position1.x -= self.view.bounds.size.width;
+//    self.userName.layer.position = position1;
+//    
+//    CGPoint position2 = self.password.layer.position;
+//    position2.x -= self.view.bounds.size.width;
+//    self.password.layer.position = position2;
     
     CABasicAnimation *cloudAnim = [CABasicAnimation animationWithKeyPath:@"opacity"];
     cloudAnim.fromValue = @(0.0);
@@ -132,34 +132,60 @@
 //        self.password.centerX += self.view.bounds.size.width;
 //    } completion:nil];
     
-    CABasicAnimation *flightRight = [CABasicAnimation animationWithKeyPath:@"position.x"];
-    flightRight.fromValue = @(-self.view.bounds.size.width * 0.5);
-    flightRight.toValue = @(self.view.bounds.size.width * 0.5);
-    flightRight.duration = 0.5;
-    flightRight.fillMode = kCAFillModeBoth;
-//    flightRight.removedOnCompletion = false;
-    
-    flightRight.delegate = self;
-    [flightRight setValue:@"form" forKey:@"name"];
-    [flightRight setValue:self.titleLabel.layer forKey:@"layer"];
-    [self.titleLabel.layer addAnimation:flightRight forKey:nil];
-    
-    flightRight.beginTime = CACurrentMediaTime() + 0.3;
-    [flightRight setValue:self.userName.layer forKey:@"layer"];
-    [self.userName.layer addAnimation:flightRight forKey:nil];
-    CGPoint position1 = self.userName.layer.position;
-    position1.x = self.view.bounds.size.width * 0.5;
-    self.userName.layer.position = position1;
-
-    
-    flightRight.beginTime = CACurrentMediaTime() + 0.4;
-    [flightRight setValue:self.password.layer forKey:@"layer"];
-    [self.password.layer addAnimation:flightRight forKey:nil];
-    
-    CGPoint position2 = self.password.layer.position;
-    position2.x = self.view.bounds.size.width * 0.5;
-    self.password.layer.position = position2;
+//    CABasicAnimation *flightRight = [CABasicAnimation animationWithKeyPath:@"position.x"];
+//    flightRight.fromValue = @(-self.view.bounds.size.width * 0.5);
+//    flightRight.toValue = @(self.view.bounds.size.width * 0.5);
+//    flightRight.duration = 0.5;
+//    flightRight.fillMode = kCAFillModeBoth;
+////    flightRight.removedOnCompletion = false;
 //    
+//    flightRight.delegate = self;
+//    [flightRight setValue:@"form" forKey:@"name"];
+//    [flightRight setValue:self.titleLabel.layer forKey:@"layer"];
+//    [self.titleLabel.layer addAnimation:flightRight forKey:nil];
+//    
+//    flightRight.beginTime = CACurrentMediaTime() + 0.3;
+//    [flightRight setValue:self.userName.layer forKey:@"layer"];
+//    [self.userName.layer addAnimation:flightRight forKey:nil];
+//    CGPoint position1 = self.userName.layer.position;
+//    position1.x = self.view.bounds.size.width * 0.5;
+//    self.userName.layer.position = position1;
+//
+//    
+//    flightRight.beginTime = CACurrentMediaTime() + 0.4;
+//    [flightRight setValue:self.password.layer forKey:@"layer"];
+//    [self.password.layer addAnimation:flightRight forKey:nil];
+//    
+//    CGPoint position2 = self.password.layer.position;
+//    position2.x = self.view.bounds.size.width * 0.5;
+//    self.password.layer.position = position2;
+    
+    CAAnimationGroup *formGroup = [[CAAnimationGroup alloc] init];
+    formGroup.duration = 0.5;
+    formGroup.fillMode = kCAFillModeBackwards;
+    
+    CABasicAnimation *flyRight = [CABasicAnimation animationWithKeyPath:@"position.x"];
+    flyRight.fromValue = @(-self.view.bounds.size.width * 0.5);
+    flyRight.toValue = @(self.view.bounds.size.width * 0.5);
+    
+    CABasicAnimation *fadeFormIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fadeFormIn.fromValue = @(0.25);
+    fadeFormIn.toValue = @(1.0);
+    
+    formGroup.animations = @[flyRight,fadeFormIn];
+    [self.titleLabel.layer addAnimation:formGroup forKey:nil];
+    
+    formGroup.delegate = self;
+    [formGroup setValue:@"form" forKey:@"name"];
+    
+    formGroup.beginTime = CACurrentMediaTime() + 0.3;
+    [formGroup setValue:self.userName.layer forKey:@"layer"];
+    [self.userName.layer addAnimation:formGroup forKey:nil];
+    
+    formGroup.beginTime = CACurrentMediaTime() + 0.4;
+    [formGroup setValue:self.password.layer forKey:@"layer"];
+    [self.password.layer addAnimation:formGroup forKey:nil];
+
 //    [UIView animateWithDuration:0.5 delay:0.5 options:0 animations:^{
 //        self.cloud1.alpha = 1.0;
 //    } completion:nil];
@@ -173,10 +199,11 @@
 //        self.cloud4.alpha = 1.0;
 //    } completion:nil];
     
-    [UIView animateWithDuration:0.5 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:0 animations:^{
-        self.loginBtn.centerY -= 30.0;
-        self.loginBtn.alpha = 1.0;
-    } completion:nil];
+//    [UIView animateWithDuration:0.5 delay:0.5 usingSpringWithDamping:0.5 initialSpringVelocity:0.0 options:0 animations:^{
+//        self.loginBtn.centerY -= 30.0;
+//        self.loginBtn.alpha = 1.0;
+//    } completion:nil];
+    
     
 //    [self animateCloud:_cloud1];
 //    [self animateCloud:_cloud2];
@@ -192,14 +219,43 @@
     flyLeft.toValue = @(self.flyInfo.layer.position.x);
 //    flyLeft.fillMode = kCAFillModeBackwards;
     flyLeft.duration = 5.0;
+//    flyLeft.repeatCount = 2.5;
+//    flyLeft.autoreverses = YES;
+//    flyLeft.repeatDuration = 10;
+//    flyLeft.speed = 2.0;
+//    self.flyInfo.layer.speed = 2.0;
+//    self.view.layer.speed = 2.0;
     [self.flyInfo.layer addAnimation:flyLeft forKey:@"infoAppear"];
     
     
     CABasicAnimation *fadeLabelIn = [CABasicAnimation animationWithKeyPath:@"opacity"];
     fadeLabelIn.fromValue = @(0.2);
     fadeLabelIn.toValue = @(1.0);
-    fadeLabelIn.duration = 4.5;
+    fadeLabelIn.duration = 2.5;
     [self.flyInfo.layer addAnimation:fadeLabelIn forKey:@"fadeIn"];
+    
+    
+    CAAnimationGroup *groupAnim = [[CAAnimationGroup alloc] init];
+    groupAnim.beginTime = CACurrentMediaTime() + 0.5;
+    groupAnim.duration = 5;
+    groupAnim.fillMode = kCAFillModeBackwards;
+    groupAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    
+    CABasicAnimation *scaleDown = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    scaleDown.fromValue = @(3.5);
+    scaleDown.toValue = @(1.0);
+    
+    CABasicAnimation *rotate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    rotate.fromValue = @(M_PI_4);
+    rotate.toValue = @(0.0);
+    
+    CABasicAnimation *opacity = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    opacity.fromValue = @(0.0);
+    opacity.toValue = @(1.0);
+    
+    groupAnim.animations = @[scaleDown,rotate,opacity];
+    
+    [self.loginBtn.layer addAnimation:groupAnim forKey:nil];
 }
 
 //- (void)animateCloud:(UIImageView *)cloud
