@@ -7,7 +7,7 @@
 #import "ViewController.h"
 #import "UIView+Extension.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *userName;
 @property (weak, nonatomic) IBOutlet UITextField *password;
@@ -69,6 +69,9 @@
     flyInfo.text = @"Tap on a field and enter username and password";
     self.flyInfo = flyInfo;
     [self.view addSubview:flyInfo];
+    
+    self.userName.delegate = self;
+    self.password.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -175,10 +178,14 @@
         self.loginBtn.alpha = 1.0;
     } completion:nil];
     
-    [self animateCloud:_cloud1];
-    [self animateCloud:_cloud2];
-    [self animateCloud:_cloud3];
-    [self animateCloud:_cloud4];
+//    [self animateCloud:_cloud1];
+//    [self animateCloud:_cloud2];
+//    [self animateCloud:_cloud3];
+//    [self animateCloud:_cloud4];
+    [self animateCloud:_cloud1.layer];
+    [self animateCloud:_cloud2.layer];
+    [self animateCloud:_cloud3.layer];
+    [self animateCloud:_cloud4.layer];
     
     CABasicAnimation *flyLeft = [CABasicAnimation animationWithKeyPath:@"position.x"];
     flyLeft.fromValue = @(self.flyInfo.layer.position.x + self.view.bounds.size.width);
@@ -195,15 +202,27 @@
     [self.flyInfo.layer addAnimation:fadeLabelIn forKey:@"fadeIn"];
 }
 
-- (void)animateCloud:(UIImageView *)cloud
+//- (void)animateCloud:(UIImageView *)cloud
+//{
+//    CGFloat duration = (self.view.frame.size.width - cloud.frame.origin.x)*60/self.view.frame.size.width;
+//    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
+//        cloud.originX = self.view.frame.size.width;
+//    } completion:^(BOOL finished) {
+//        cloud.originX = -cloud.frame.size.width;
+//        [self animateCloud:cloud];
+//    }];
+//}
+
+- (void)animateCloud:(CALayer *)layer
 {
-    CGFloat duration = (self.view.frame.size.width - cloud.frame.origin.x)*60/self.view.frame.size.width;
-    [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionCurveLinear animations:^{
-        cloud.originX = self.view.frame.size.width;
-    } completion:^(BOOL finished) {
-        cloud.originX = -cloud.frame.size.width;
-        [self animateCloud:cloud];
-    }];
+    CGFloat duration = (self.view.frame.size.width - layer.frame.origin.x)*60/self.view.frame.size.width;
+    CABasicAnimation *cloudAnim = [CABasicAnimation animationWithKeyPath:@"position.x"];
+    cloudAnim.toValue = @(self.view.frame.size.width + layer.frame.size.width * 0.5);
+    cloudAnim.duration = duration;
+    [cloudAnim setValue:@"cloud" forKey:@"name"];
+    [cloudAnim setValue:layer forKey:@"layer"];
+    cloudAnim.delegate = self;
+    [layer addAnimation:cloudAnim forKey:nil];
 }
 
 - (IBAction)login:(UIButton *)sender {
@@ -304,8 +323,8 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     NSString *name = [anim valueForKey:@"name"];
+     CALayer *layer = [anim valueForKey:@"layer"];
     if (name.length && [name isEqualToString:@"form"]) {
-        CALayer *layer = [anim valueForKey:@"layer"];
         if (layer) {
             [anim setValue:nil forKey:@"layer"];
             CABasicAnimation *scaleAnim = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
@@ -314,7 +333,19 @@
             scaleAnim.duration = 0.25;
             [layer addAnimation:scaleAnim forKey:nil];
         }
+    }else if (name.length && [name isEqualToString:@"cloud"]){
+        CGPoint position = layer.position;
+        position.x = -layer.frame.size.width * 0.5;
+        layer.position = position;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self animateCloud:layer];
+        });
     }
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self.flyInfo.layer removeAnimationForKey:@"infoAppear"];
 }
 
 - (void)didReceiveMemoryWarning {
