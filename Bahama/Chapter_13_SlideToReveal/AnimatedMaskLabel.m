@@ -24,13 +24,16 @@ IB_DESIGNABLE
         _gradientLayer.startPoint = CGPointMake(0.0, 0.5);
         _gradientLayer.endPoint = CGPointMake(1.0, 0.5);
         NSArray *colors = @[
-                            (id)([UIColor blackColor].CGColor),
-                            (id)([UIColor whiteColor].CGColor),
-                            (id)([UIColor blackColor].CGColor)
+                            (id)([UIColor yellowColor].CGColor),
+                            (id)([UIColor greenColor].CGColor),
+                            (id)([UIColor orangeColor].CGColor),
+                            (id)([UIColor cyanColor].CGColor),
+                            (id)([UIColor redColor].CGColor),
+                            (id)([UIColor yellowColor].CGColor)
                             ];
         _gradientLayer.colors = colors;
         
-        _gradientLayer.locations = @[@(0.25),@(0.5),@(0.75)];
+        _gradientLayer.locations = @[@(0.0),@(0.0),@(0.0),@(0.0),@(0.0),@(0.25)];
     }
     return _gradientLayer;
 }
@@ -97,8 +100,8 @@ IB_DESIGNABLE
     [self.layer addSublayer:self.gradientLayer];
     
     CABasicAnimation *gradientAnim = [CABasicAnimation animationWithKeyPath:@"locations"];
-    gradientAnim.fromValue = @[@(0.0),@(0.0),@(0.25)];
-    gradientAnim.toValue = @[@(0.75),@(1.0),@(1.0)];
+    gradientAnim.fromValue = @[@(0.0),@(0.0),@(0.0),@(0.0),@(0.0),@(0.25)];
+    gradientAnim.toValue = @[@(0.65),@(0.8),@(0.85),@(0.9),@(0.95),@(1.0)];
     gradientAnim.duration = 3.0;
     gradientAnim.repeatCount = MAXFLOAT;
     
