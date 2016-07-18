@@ -2,14 +2,12 @@
 //  AvatarView.m
 //  iOS_Animations_by_Tutorials_ObjC
 //
-//  Created by wukai on 16/7/16.
-//  Copyright © 2016年 JD.K. All rights reserved.
 //
 
 #import "AvatarView.h"
 
 #define customLineWidth 6.0
-#define nimationDuration 1.0
+#define animationDuration 1.0
 
 IB_DESIGNABLE
 @interface AvatarView()
@@ -18,6 +16,7 @@ IB_DESIGNABLE
 @property(nonatomic, weak) CAShapeLayer *circleLayer;
 @property(nonatomic, weak) CAShapeLayer *maskLayer;
 @property(nonatomic, weak) UILabel *label;
+@property(nonatomic, assign) BOOL isSquare;
 
 @end
 
@@ -88,6 +87,59 @@ IB_DESIGNABLE
     
     self.label.frame = CGRectMake(0, self.bounds.size.height + 10, self.bounds.size.width, 24);
     
+}
+
+- (void)bounceOffPoint:(CGPoint)bouncePoint morphSize:(CGSize)morphSize
+{
+    CGPoint orignCenter = self.center;
+    [UIView animateWithDuration:animationDuration delay:0.0 usingSpringWithDamping:0.8 initialSpringVelocity:0.0 options:0 animations:^{
+        self.center = bouncePoint;
+    } completion:^(BOOL finished) {
+        if (self.shouldTransitionToFinishedState) {
+            [self animateToSquare];
+        }
+    }];
+    
+    [UIView animateWithDuration:animationDuration delay:animationDuration usingSpringWithDamping:0.7 initialSpringVelocity:0.0 options:0 animations:^{
+        self.center = orignCenter;
+    } completion:^(BOOL finished) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            if (!self.isSquare)
+            [self bounceOffPoint:bouncePoint morphSize:morphSize];
+        });
+    }];
+    
+    CGRect leftMorphFrame = CGRectMake(self.bounds.size.width - morphSize.width, self.bounds.size.height - morphSize.height, morphSize.width, morphSize.height);
+    
+    CGRect rightMorphFrame = CGRectMake(0.0, self.bounds.size.height - morphSize.height, morphSize.width, morphSize.height);
+    
+    CGRect morphFrame = orignCenter.x < bouncePoint.x ? leftMorphFrame : rightMorphFrame;
+    //形变
+    CABasicAnimation *morphAnim = [CABasicAnimation animationWithKeyPath:@"path"];
+    morphAnim.duration = animationDuration;
+    morphAnim.toValue = (__bridge id _Nullable)([UIBezierPath bezierPathWithOvalInRect:morphFrame].CGPath);
+    morphAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    
+    [self.circleLayer addAnimation:morphAnim forKey:nil];
+    [self.maskLayer addAnimation:morphAnim forKey:nil];
+
+}
+
+- (void)animateToSquare
+{
+    self.isSquare = YES;
+    
+    UIBezierPath *squarePath = [UIBezierPath bezierPathWithRect:self.bounds];
+    CABasicAnimation *squareAnim = [CABasicAnimation animationWithKeyPath:@"path"];
+    squareAnim.fromValue = (__bridge id _Nullable)(self.circleLayer.path);
+    squareAnim.toValue = (__bridge id _Nullable)(squarePath.CGPath);
+    squareAnim.duration = 0.25;
+    
+    [self.circleLayer addAnimation:squareAnim forKey:nil];
+    [self.maskLayer addAnimation:squareAnim forKey:nil];
+    
+    self.circleLayer.path = squarePath.CGPath;
+    self.maskLayer.path = squarePath.CGPath;
 }
 
 @end
