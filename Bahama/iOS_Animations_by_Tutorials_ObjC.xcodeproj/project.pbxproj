@@ -43,6 +43,14 @@
 		105659EA1D38B89800535C35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105659E21D38B89800535C35 /* LaunchScreen.storyboard */; };
 		105659EB1D38B89800535C35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105659E41D38B89800535C35 /* Main.storyboard */; };
 		105659EC1D38B89800535C35 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 105659E81D38B89800535C35 /* UIView+Extension.m */; };
+		1065EFA31D3CB02C008FA045 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065EFA21D3CB02C008FA045 /* main.m */; };
+		1065EFA61D3CB02C008FA045 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065EFA51D3CB02C008FA045 /* AppDelegate.m */; };
+		1065EFA91D3CB02C008FA045 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065EFA81D3CB02C008FA045 /* ViewController.m */; };
+		1065EFAC1D3CB02C008FA045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1065EFAA1D3CB02C008FA045 /* Main.storyboard */; };
+		1065EFAE1D3CB02C008FA045 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1065EFAD1D3CB02C008FA045 /* Assets.xcassets */; };
+		1065EFB11D3CB02C008FA045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1065EFAF1D3CB02C008FA045 /* LaunchScreen.storyboard */; };
+		1065EFB81D3CB286008FA045 /* AnimatedMaskLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065EFB71D3CB286008FA045 /* AnimatedMaskLabel.m */; };
+		1065EFBD1D3CE721008FA045 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065EFBC1D3CE721008FA045 /* UIView+Extension.m */; };
 		10FD60B81D35137F00543902 /* PracticeAnimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD60B71D35137F00543902 /* PracticeAnimViewController.m */; };
 		3CD8F5451D3A297700DCBEA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8F5441D3A297700DCBEA7 /* main.m */; };
 		3CD8F5481D3A297700DCBEA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8F5471D3A297700DCBEA7 /* AppDelegate.m */; };
@@ -116,6 +124,20 @@
 		105659E51D38B89800535C35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		105659E71D38B89800535C35 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		105659E81D38B89800535C35 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		1065EF9F1D3CB02C008FA045 /* Chapter_13_SlideToReveal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter_13_SlideToReveal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1065EFA21D3CB02C008FA045 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1065EFA41D3CB02C008FA045 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1065EFA51D3CB02C008FA045 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1065EFA71D3CB02C008FA045 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1065EFA81D3CB02C008FA045 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1065EFAB1D3CB02C008FA045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1065EFAD1D3CB02C008FA045 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1065EFB01D3CB02C008FA045 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1065EFB21D3CB02C008FA045 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1065EFB61D3CB286008FA045 /* AnimatedMaskLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedMaskLabel.h; sourceTree = "<group>"; };
+		1065EFB71D3CB286008FA045 /* AnimatedMaskLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatedMaskLabel.m; sourceTree = "<group>"; };
+		1065EFBB1D3CE721008FA045 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		1065EFBC1D3CE721008FA045 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		10FD60B61D35137F00543902 /* PracticeAnimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeAnimViewController.h; sourceTree = "<group>"; };
 		10FD60B71D35137F00543902 /* PracticeAnimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeAnimViewController.m; sourceTree = "<group>"; };
 		3CD8F5411D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter_12_MultiPlayerSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +190,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1065EF9C1D3CB02C008FA045 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CD8F53E1D3A297700DCBEA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -187,6 +216,7 @@
 				102DF3421D3729C200C545D7 /* Chapter_6_7_PackingList */,
 				102DF3621D37B2C400C545D7 /* Chapter8_11_Layer */,
 				3CD8F5421D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch */,
+				1065EFA01D3CB02C008FA045 /* Chapter_13_SlideToReveal */,
 				101B526A1D2CB4620078B950 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -200,6 +230,7 @@
 				102DF3611D37B2C400C545D7 /* Chapter8_Layer.app */,
 				105659C31D38B7DC00535C35 /* Chapter_1_3_Bahama.app */,
 				3CD8F5411D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch.app */,
+				1065EF9F1D3CB02C008FA045 /* Chapter_13_SlideToReveal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -380,6 +411,42 @@
 			path = Categary;
 			sourceTree = "<group>";
 		};
+		1065EFA01D3CB02C008FA045 /* Chapter_13_SlideToReveal */ = {
+			isa = PBXGroup;
+			children = (
+				1065EFBA1D3CE721008FA045 /* Categary */,
+				1065EFA41D3CB02C008FA045 /* AppDelegate.h */,
+				1065EFA51D3CB02C008FA045 /* AppDelegate.m */,
+				1065EFB61D3CB286008FA045 /* AnimatedMaskLabel.h */,
+				1065EFB71D3CB286008FA045 /* AnimatedMaskLabel.m */,
+				1065EFA71D3CB02C008FA045 /* ViewController.h */,
+				1065EFA81D3CB02C008FA045 /* ViewController.m */,
+				1065EFAA1D3CB02C008FA045 /* Main.storyboard */,
+				1065EFAD1D3CB02C008FA045 /* Assets.xcassets */,
+				1065EFAF1D3CB02C008FA045 /* LaunchScreen.storyboard */,
+				1065EFB21D3CB02C008FA045 /* Info.plist */,
+				1065EFA11D3CB02C008FA045 /* Supporting Files */,
+			);
+			path = Chapter_13_SlideToReveal;
+			sourceTree = "<group>";
+		};
+		1065EFA11D3CB02C008FA045 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1065EFA21D3CB02C008FA045 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1065EFBA1D3CE721008FA045 /* Categary */ = {
+			isa = PBXGroup;
+			children = (
+				1065EFBB1D3CE721008FA045 /* UIView+Extension.h */,
+				1065EFBC1D3CE721008FA045 /* UIView+Extension.m */,
+			);
+			path = Categary;
+			sourceTree = "<group>";
+		};
 		10FD60B41D3512F300543902 /* Chapter_1-3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +579,23 @@
 			productReference = 105659C31D38B7DC00535C35 /* Chapter_1_3_Bahama.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1065EF9E1D3CB02C008FA045 /* Chapter_13_SlideToReveal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1065EFB51D3CB02C008FA045 /* Build configuration list for PBXNativeTarget "Chapter_13_SlideToReveal" */;
+			buildPhases = (
+				1065EF9B1D3CB02C008FA045 /* Sources */,
+				1065EF9C1D3CB02C008FA045 /* Frameworks */,
+				1065EF9D1D3CB02C008FA045 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chapter_13_SlideToReveal;
+			productName = Chapter_13_SlideToReveal;
+			productReference = 1065EF9F1D3CB02C008FA045 /* Chapter_13_SlideToReveal.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3CD8F5401D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CD8F5551D3A297700DCBEA7 /* Build configuration list for PBXNativeTarget "Chapter_12_MultiPlayerSearch" */;
@@ -553,6 +637,9 @@
 					105659C21D38B7DC00535C35 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					1065EF9E1D3CB02C008FA045 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					3CD8F5401D3A297700DCBEA7 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = GQDC3CXA69;
@@ -578,6 +665,7 @@
 				102DF3601D37B2C400C545D7 /* Chapter8_Layer */,
 				105659C21D38B7DC00535C35 /* Chapter_1_3_Bahama */,
 				3CD8F5401D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch */,
+				1065EF9E1D3CB02C008FA045 /* Chapter_13_SlideToReveal */,
 			);
 		};
 /* End PBXProject section */
@@ -630,6 +718,16 @@
 				105659EB1D38B89800535C35 /* Main.storyboard in Resources */,
 				105659E91D38B89800535C35 /* Assets.xcassets in Resources */,
 				105659EA1D38B89800535C35 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1065EF9D1D3CB02C008FA045 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1065EFB11D3CB02C008FA045 /* LaunchScreen.storyboard in Resources */,
+				1065EFAE1D3CB02C008FA045 /* Assets.xcassets in Resources */,
+				1065EFAC1D3CB02C008FA045 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +798,18 @@
 				105659C71D38B7DC00535C35 /* main.m in Sources */,
 				105659EC1D38B89800535C35 /* UIView+Extension.m in Sources */,
 				105659DF1D38B88C00535C35 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1065EF9B1D3CB02C008FA045 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1065EFBD1D3CE721008FA045 /* UIView+Extension.m in Sources */,
+				1065EFA91D3CB02C008FA045 /* ViewController.m in Sources */,
+				1065EFB81D3CB286008FA045 /* AnimatedMaskLabel.m in Sources */,
+				1065EFA61D3CB02C008FA045 /* AppDelegate.m in Sources */,
+				1065EFA31D3CB02C008FA045 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,6 +905,22 @@
 				105659E51D38B89800535C35 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1065EFAA1D3CB02C008FA045 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1065EFAB1D3CB02C008FA045 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1065EFAF1D3CB02C008FA045 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1065EFB01D3CB02C008FA045 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		3CD8F54C1D3A297700DCBEA7 /* Main.storyboard */ = {
@@ -1008,6 +1134,28 @@
 			};
 			name = Release;
 		};
+		1065EFB31D3CB02C008FA045 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter_13_SlideToReveal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-13-SlideToReveal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1065EFB41D3CB02C008FA045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter_13_SlideToReveal/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-13-SlideToReveal";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3CD8F5561D3A297700DCBEA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1086,6 +1234,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1065EFB51D3CB02C008FA045 /* Build configuration list for PBXNativeTarget "Chapter_13_SlideToReveal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1065EFB31D3CB02C008FA045 /* Debug */,
+				1065EFB41D3CB02C008FA045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		3CD8F5551D3A297700DCBEA7 /* Build configuration list for PBXNativeTarget "Chapter_12_MultiPlayerSearch" */ = {
 			isa = XCConfigurationList;
