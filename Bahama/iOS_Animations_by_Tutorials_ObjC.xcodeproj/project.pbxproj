@@ -58,6 +58,12 @@
 		1065EFE31D3CF6AB008FA045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1065EFE21D3CF6AB008FA045 /* Main.storyboard */; };
 		10EB30431D3E21C80006B89B /* VacationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB30421D3E21C80006B89B /* VacationTableViewController.m */; };
 		10EB30501D3E388A0006B89B /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB304F1D3E388A0006B89B /* RefreshView.m */; };
+		10EB305B1D406BA40006B89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB305A1D406BA40006B89B /* main.m */; };
+		10EB305E1D406BA40006B89B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB305D1D406BA40006B89B /* AppDelegate.m */; };
+		10EB30641D406BA50006B89B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10EB30621D406BA50006B89B /* Main.storyboard */; };
+		10EB30661D406BA50006B89B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10EB30651D406BA50006B89B /* Assets.xcassets */; };
+		10EB30691D406BA50006B89B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10EB30671D406BA50006B89B /* LaunchScreen.storyboard */; };
+		10EB30701D406C450006B89B /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB306F1D406C450006B89B /* ContainerViewController.m */; };
 		10FD60B81D35137F00543902 /* PracticeAnimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD60B71D35137F00543902 /* PracticeAnimViewController.m */; };
 		3CD8F5451D3A297700DCBEA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8F5441D3A297700DCBEA7 /* main.m */; };
 		3CD8F5481D3A297700DCBEA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8F5471D3A297700DCBEA7 /* AppDelegate.m */; };
@@ -157,6 +163,16 @@
 		10EB30421D3E21C80006B89B /* VacationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VacationTableViewController.m; sourceTree = "<group>"; };
 		10EB304E1D3E388A0006B89B /* RefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshView.h; sourceTree = "<group>"; };
 		10EB304F1D3E388A0006B89B /* RefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshView.m; sourceTree = "<group>"; };
+		10EB30571D406BA40006B89B /* Chapter_15_Simple 3D Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chapter_15_Simple 3D Animations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10EB305A1D406BA40006B89B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		10EB305C1D406BA40006B89B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		10EB305D1D406BA40006B89B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		10EB30631D406BA50006B89B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10EB30651D406BA50006B89B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10EB30681D406BA50006B89B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10EB306A1D406BA50006B89B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10EB306E1D406C450006B89B /* ContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewController.h; sourceTree = "<group>"; };
+		10EB306F1D406C450006B89B /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		10FD60B61D35137F00543902 /* PracticeAnimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeAnimViewController.h; sourceTree = "<group>"; };
 		10FD60B71D35137F00543902 /* PracticeAnimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeAnimViewController.m; sourceTree = "<group>"; };
 		3CD8F5411D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter_12_MultiPlayerSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +239,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10EB30541D406BA40006B89B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3CD8F53E1D3A297700DCBEA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -244,6 +267,7 @@
 				3CD8F5421D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch */,
 				1065EFA01D3CB02C008FA045 /* Chapter_13_SlideToReveal */,
 				1065EFC31D3CF663008FA045 /* Chapter_14_StrokeAndPath */,
+				10EB30581D406BA40006B89B /* Chapter_15_Simple 3D Animations */,
 				101B526A1D2CB4620078B950 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -259,6 +283,7 @@
 				3CD8F5411D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch.app */,
 				1065EF9F1D3CB02C008FA045 /* Chapter_13_SlideToReveal.app */,
 				1065EFC21D3CF663008FA045 /* Chapter_14_StrokeAndPath.app */,
+				10EB30571D406BA40006B89B /* Chapter_15_Simple 3D Animations.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -501,6 +526,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		10EB30581D406BA40006B89B /* Chapter_15_Simple 3D Animations */ = {
+			isa = PBXGroup;
+			children = (
+				10EB305C1D406BA40006B89B /* AppDelegate.h */,
+				10EB305D1D406BA40006B89B /* AppDelegate.m */,
+				10EB306E1D406C450006B89B /* ContainerViewController.h */,
+				10EB306F1D406C450006B89B /* ContainerViewController.m */,
+				10EB30621D406BA50006B89B /* Main.storyboard */,
+				10EB30651D406BA50006B89B /* Assets.xcassets */,
+				10EB30671D406BA50006B89B /* LaunchScreen.storyboard */,
+				10EB306A1D406BA50006B89B /* Info.plist */,
+				10EB30591D406BA40006B89B /* Supporting Files */,
+			);
+			path = "Chapter_15_Simple 3D Animations";
+			sourceTree = "<group>";
+		};
+		10EB30591D406BA40006B89B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10EB305A1D406BA40006B89B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		10FD60B41D3512F300543902 /* Chapter_1-3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,6 +716,23 @@
 			productReference = 1065EFC21D3CF663008FA045 /* Chapter_14_StrokeAndPath.app */;
 			productType = "com.apple.product-type.application";
 		};
+		10EB30561D406BA40006B89B /* Chapter_15_Simple 3D Animations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10EB306B1D406BA50006B89B /* Build configuration list for PBXNativeTarget "Chapter_15_Simple 3D Animations" */;
+			buildPhases = (
+				10EB30531D406BA40006B89B /* Sources */,
+				10EB30541D406BA40006B89B /* Frameworks */,
+				10EB30551D406BA40006B89B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chapter_15_Simple 3D Animations";
+			productName = "Chapter_15_Simple 3D Animations";
+			productReference = 10EB30571D406BA40006B89B /* Chapter_15_Simple 3D Animations.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3CD8F5401D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CD8F5551D3A297700DCBEA7 /* Build configuration list for PBXNativeTarget "Chapter_12_MultiPlayerSearch" */;
@@ -713,6 +779,10 @@
 					};
 					1065EFC11D3CF663008FA045 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = N74JCBVV4U;
+					};
+					10EB30561D406BA40006B89B = {
+						CreatedOnToolsVersion = 7.3.1;
 					};
 					3CD8F5401D3A297700DCBEA7 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -741,6 +811,7 @@
 				3CD8F5401D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch */,
 				1065EF9E1D3CB02C008FA045 /* Chapter_13_SlideToReveal */,
 				1065EFC11D3CF663008FA045 /* Chapter_14_StrokeAndPath */,
+				10EB30561D406BA40006B89B /* Chapter_15_Simple 3D Animations */,
 			);
 		};
 /* End PBXProject section */
@@ -813,6 +884,16 @@
 				1065EFE31D3CF6AB008FA045 /* Main.storyboard in Resources */,
 				1065EFD41D3CF663008FA045 /* LaunchScreen.storyboard in Resources */,
 				1065EFD11D3CF663008FA045 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10EB30551D406BA40006B89B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10EB30691D406BA50006B89B /* LaunchScreen.storyboard in Resources */,
+				10EB30661D406BA50006B89B /* Assets.xcassets in Resources */,
+				10EB30641D406BA50006B89B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,6 +987,16 @@
 				1065EFDB1D3CF68E008FA045 /* AppDelegate.m in Sources */,
 				10EB30501D3E388A0006B89B /* RefreshView.m in Sources */,
 				1065EFC61D3CF663008FA045 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10EB30531D406BA40006B89B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10EB305E1D406BA40006B89B /* AppDelegate.m in Sources */,
+				10EB30701D406C450006B89B /* ContainerViewController.m in Sources */,
+				10EB305B1D406BA40006B89B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1023,6 +1114,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				1065EFD31D3CF663008FA045 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		10EB30621D406BA50006B89B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10EB30631D406BA50006B89B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10EB30671D406BA50006B89B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10EB30681D406BA50006B89B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1264,10 +1371,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Chapter_14_StrokeAndPath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-14-StrokeAndPath";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1275,9 +1385,34 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Chapter_14_StrokeAndPath/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-14-StrokeAndPath";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		10EB306C1D406BA50006B89B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Chapter_15_Simple 3D Animations/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-15-Simple-3D-Animations";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		10EB306D1D406BA50006B89B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Chapter_15_Simple 3D Animations/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-15-Simple-3D-Animations";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1375,6 +1510,15 @@
 			buildConfigurations = (
 				1065EFD71D3CF663008FA045 /* Debug */,
 				1065EFD81D3CF663008FA045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10EB306B1D406BA50006B89B /* Build configuration list for PBXNativeTarget "Chapter_15_Simple 3D Animations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10EB306C1D406BA50006B89B /* Debug */,
+				10EB306D1D406BA50006B89B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
