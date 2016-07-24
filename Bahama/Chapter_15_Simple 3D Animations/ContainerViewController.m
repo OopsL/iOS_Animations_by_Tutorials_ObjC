@@ -7,8 +7,13 @@
 //
 
 #import "ContainerViewController.h"
+#import "DetailViewController.h"
 
-@interface ContainerViewController ()
+@interface ContainerViewController ()<UIScrollViewDelegate>
+
+@property(nonatomic, weak) DetailViewController *detailViewController;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *menuContainerView;
 
 @end
 
@@ -17,6 +22,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)setMenuItem:(NSDictionary *)menuItem
+{
+    _menuItem = menuItem;
+    self.detailViewController.menuItem = menuItem;
+    [self hideOrShowMenu:false animated:false];
+}
+
+- (void)hideOrShowMenu:(BOOL)show animated:(BOOL)animated
+{
+    [self.scrollView setContentOffset: show ? CGPointZero:CGPointMake(self.menuContainerView.bounds.size.width, 0) animated:animated];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"DetailViewSegue"]) {
+        UINavigationController *navi = segue.destinationViewController;
+        self.detailViewController = (DetailViewController *)navi.topViewController;
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    scrollView.pagingEnabled = scrollView.contentOffset.x < (scrollView.contentSize.width - scrollView.frame.size.width);
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {

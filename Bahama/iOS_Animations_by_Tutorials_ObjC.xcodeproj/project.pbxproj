@@ -65,6 +65,11 @@
 		10EB30691D406BA50006B89B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10EB30671D406BA50006B89B /* LaunchScreen.storyboard */; };
 		10EB30701D406C450006B89B /* ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB306F1D406C450006B89B /* ContainerViewController.m */; };
 		10FD60B81D35137F00543902 /* PracticeAnimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FD60B71D35137F00543902 /* PracticeAnimViewController.m */; };
+		3C49B1581D44B9BC00F5FB58 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C49B1571D44B9BC00F5FB58 /* MenuViewController.m */; };
+		3C49B15B1D44BAED00F5FB58 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C49B15A1D44BAED00F5FB58 /* DetailViewController.m */; };
+		3C49B15D1D44BCF000F5FB58 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C49B15C1D44BCF000F5FB58 /* MenuItems.plist */; };
+		3C49B1611D44C3FE00F5FB58 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C49B1601D44C3FE00F5FB58 /* MenuItemCell.m */; };
+		3C49B1641D44C6A000F5FB58 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C49B1631D44C6A000F5FB58 /* UIColor+Extension.m */; };
 		3CD8F5451D3A297700DCBEA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8F5441D3A297700DCBEA7 /* main.m */; };
 		3CD8F5481D3A297700DCBEA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8F5471D3A297700DCBEA7 /* AppDelegate.m */; };
 		3CD8F54B1D3A297700DCBEA7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8F54A1D3A297700DCBEA7 /* ViewController.m */; };
@@ -175,6 +180,15 @@
 		10EB306F1D406C450006B89B /* ContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerViewController.m; sourceTree = "<group>"; };
 		10FD60B61D35137F00543902 /* PracticeAnimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeAnimViewController.h; sourceTree = "<group>"; };
 		10FD60B71D35137F00543902 /* PracticeAnimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeAnimViewController.m; sourceTree = "<group>"; };
+		3C49B1561D44B9BC00F5FB58 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		3C49B1571D44B9BC00F5FB58 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		3C49B1591D44BAED00F5FB58 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3C49B15A1D44BAED00F5FB58 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3C49B15C1D44BCF000F5FB58 /* MenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MenuItems.plist; sourceTree = "<group>"; };
+		3C49B15F1D44C3FE00F5FB58 /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
+		3C49B1601D44C3FE00F5FB58 /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
+		3C49B1621D44C6A000F5FB58 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		3C49B1631D44C6A000F5FB58 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		3CD8F5411D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter_12_MultiPlayerSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD8F5441D3A297700DCBEA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3CD8F5461D3A297700DCBEA7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -529,12 +543,14 @@
 		10EB30581D406BA40006B89B /* Chapter_15_Simple 3D Animations */ = {
 			isa = PBXGroup;
 			children = (
+				3C49B15E1D44BDC600F5FB58 /* ContainerVc */,
 				10EB305C1D406BA40006B89B /* AppDelegate.h */,
 				10EB305D1D406BA40006B89B /* AppDelegate.m */,
 				10EB306E1D406C450006B89B /* ContainerViewController.h */,
 				10EB306F1D406C450006B89B /* ContainerViewController.m */,
 				10EB30621D406BA50006B89B /* Main.storyboard */,
 				10EB30651D406BA50006B89B /* Assets.xcassets */,
+				3C49B15C1D44BCF000F5FB58 /* MenuItems.plist */,
 				10EB30671D406BA50006B89B /* LaunchScreen.storyboard */,
 				10EB306A1D406BA50006B89B /* Info.plist */,
 				10EB30591D406BA40006B89B /* Supporting Files */,
@@ -566,6 +582,21 @@
 				10FD60B71D35137F00543902 /* PracticeAnimViewController.m */,
 			);
 			name = Chapter_4;
+			sourceTree = "<group>";
+		};
+		3C49B15E1D44BDC600F5FB58 /* ContainerVc */ = {
+			isa = PBXGroup;
+			children = (
+				3C49B1591D44BAED00F5FB58 /* DetailViewController.h */,
+				3C49B15A1D44BAED00F5FB58 /* DetailViewController.m */,
+				3C49B1561D44B9BC00F5FB58 /* MenuViewController.h */,
+				3C49B1571D44B9BC00F5FB58 /* MenuViewController.m */,
+				3C49B15F1D44C3FE00F5FB58 /* MenuItemCell.h */,
+				3C49B1601D44C3FE00F5FB58 /* MenuItemCell.m */,
+				3C49B1621D44C6A000F5FB58 /* UIColor+Extension.h */,
+				3C49B1631D44C6A000F5FB58 /* UIColor+Extension.m */,
+			);
+			name = ContainerVc;
 			sourceTree = "<group>";
 		};
 		3CD8F5421D3A297700DCBEA7 /* Chapter_12_MultiPlayerSearch */ = {
@@ -891,6 +922,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C49B15D1D44BCF000F5FB58 /* MenuItems.plist in Resources */,
 				10EB30691D406BA50006B89B /* LaunchScreen.storyboard in Resources */,
 				10EB30661D406BA50006B89B /* Assets.xcassets in Resources */,
 				10EB30641D406BA50006B89B /* Main.storyboard in Resources */,
@@ -994,9 +1026,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C49B15B1D44BAED00F5FB58 /* DetailViewController.m in Sources */,
 				10EB305E1D406BA40006B89B /* AppDelegate.m in Sources */,
 				10EB30701D406C450006B89B /* ContainerViewController.m in Sources */,
+				3C49B1641D44C6A000F5FB58 /* UIColor+Extension.m in Sources */,
 				10EB305B1D406BA40006B89B /* main.m in Sources */,
+				3C49B1581D44B9BC00F5FB58 /* MenuViewController.m in Sources */,
+				3C49B1611D44C3FE00F5FB58 /* MenuItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

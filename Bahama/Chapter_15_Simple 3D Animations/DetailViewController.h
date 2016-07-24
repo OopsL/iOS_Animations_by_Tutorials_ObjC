@@ -1,14 +1,14 @@
 //
-//  ContainerViewController.h
+//  DetailViewController.h
 //  iOS_Animations_by_Tutorials_ObjC
 //
-//  Created by JD.K on 16/7/21.
+//  Created by wukai on 16/7/24.
 //  Copyright © 2016年 JD.K. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ContainerViewController : UIViewController
+@interface DetailViewController : UIViewController
 
 @property(nonatomic, strong) NSDictionary *menuItem;
 
