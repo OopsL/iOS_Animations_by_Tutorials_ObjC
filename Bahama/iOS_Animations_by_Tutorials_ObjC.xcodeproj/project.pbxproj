@@ -56,6 +56,7 @@
 		1065EFD41D3CF663008FA045 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1065EFD21D3CF663008FA045 /* LaunchScreen.storyboard */; };
 		1065EFDB1D3CF68E008FA045 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065EFDA1D3CF68E008FA045 /* AppDelegate.m */; };
 		1065EFE31D3CF6AB008FA045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1065EFE21D3CF6AB008FA045 /* Main.storyboard */; };
+		106B73F51D45A06A00746FD3 /* HamburgerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106B73F41D45A06A00746FD3 /* HamburgerView.m */; };
 		10EB30431D3E21C80006B89B /* VacationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB30421D3E21C80006B89B /* VacationTableViewController.m */; };
 		10EB30501D3E388A0006B89B /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB304F1D3E388A0006B89B /* RefreshView.m */; };
 		10EB305B1D406BA40006B89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB305A1D406BA40006B89B /* main.m */; };
@@ -164,6 +165,8 @@
 		1065EFD91D3CF68E008FA045 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1065EFDA1D3CF68E008FA045 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1065EFE21D3CF6AB008FA045 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		106B73F31D45A06A00746FD3 /* HamburgerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HamburgerView.h; sourceTree = "<group>"; };
+		106B73F41D45A06A00746FD3 /* HamburgerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamburgerView.m; sourceTree = "<group>"; };
 		10EB30411D3E21C80006B89B /* VacationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VacationTableViewController.h; sourceTree = "<group>"; };
 		10EB30421D3E21C80006B89B /* VacationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VacationTableViewController.m; sourceTree = "<group>"; };
 		10EB304E1D3E388A0006B89B /* RefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshView.h; sourceTree = "<group>"; };
@@ -540,9 +543,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		106B73F21D45A04300746FD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3C49B15F1D44C3FE00F5FB58 /* MenuItemCell.h */,
+				3C49B1601D44C3FE00F5FB58 /* MenuItemCell.m */,
+				3C49B1621D44C6A000F5FB58 /* UIColor+Extension.h */,
+				3C49B1631D44C6A000F5FB58 /* UIColor+Extension.m */,
+				106B73F31D45A06A00746FD3 /* HamburgerView.h */,
+				106B73F41D45A06A00746FD3 /* HamburgerView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		10EB30581D406BA40006B89B /* Chapter_15_Simple 3D Animations */ = {
 			isa = PBXGroup;
 			children = (
+				106B73F21D45A04300746FD3 /* View */,
 				3C49B15E1D44BDC600F5FB58 /* ContainerVc */,
 				10EB305C1D406BA40006B89B /* AppDelegate.h */,
 				10EB305D1D406BA40006B89B /* AppDelegate.m */,
@@ -591,10 +608,6 @@
 				3C49B15A1D44BAED00F5FB58 /* DetailViewController.m */,
 				3C49B1561D44B9BC00F5FB58 /* MenuViewController.h */,
 				3C49B1571D44B9BC00F5FB58 /* MenuViewController.m */,
-				3C49B15F1D44C3FE00F5FB58 /* MenuItemCell.h */,
-				3C49B1601D44C3FE00F5FB58 /* MenuItemCell.m */,
-				3C49B1621D44C6A000F5FB58 /* UIColor+Extension.h */,
-				3C49B1631D44C6A000F5FB58 /* UIColor+Extension.m */,
 			);
 			name = ContainerVc;
 			sourceTree = "<group>";
@@ -1028,6 +1041,7 @@
 			files = (
 				3C49B15B1D44BAED00F5FB58 /* DetailViewController.m in Sources */,
 				10EB305E1D406BA40006B89B /* AppDelegate.m in Sources */,
+				106B73F51D45A06A00746FD3 /* HamburgerView.m in Sources */,
 				10EB30701D406C450006B89B /* ContainerViewController.m in Sources */,
 				3C49B1641D44C6A000F5FB58 /* UIColor+Extension.m in Sources */,
 				10EB305B1D406BA40006B89B /* main.m in Sources */,
