@@ -28,6 +28,13 @@
 		102DF3731D37B2C400C545D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102DF3711D37B2C400C545D7 /* LaunchScreen.storyboard */; };
 		102DF37B1D38707400C545D7 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 102DF37A1D38707400C545D7 /* UIView+Extension.m */; };
 		103168021D484E4500F4DF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10DAED0C1D4849E000B6C00D /* Assets.xcassets */; };
+		1031680B1D484EC900F4DF33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1031680A1D484EC900F4DF33 /* main.m */; };
+		1031680E1D484EC900F4DF33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1031680D1D484EC900F4DF33 /* AppDelegate.m */; };
+		103168141D484EC900F4DF33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103168121D484EC900F4DF33 /* Main.storyboard */; };
+		103168161D484EC900F4DF33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103168151D484EC900F4DF33 /* Assets.xcassets */; };
+		103168191D484EC900F4DF33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103168171D484EC900F4DF33 /* LaunchScreen.storyboard */; };
+		103168201D484F8A00F4DF33 /* GalleryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1031681F1D484F8A00F4DF33 /* GalleryViewController.m */; };
+		103168231D484FD400F4DF33 /* ImageViewCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 103168221D484FD400F4DF33 /* ImageViewCard.m */; };
 		104622BE1D351A9F005773E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622BD1D351A9F005773E5 /* main.m */; };
 		104622C11D351A9F005773E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622C01D351A9F005773E5 /* AppDelegate.m */; };
 		104622C41D351A9F005773E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622C31D351A9F005773E5 /* ViewController.m */; };
@@ -116,6 +123,18 @@
 		102DF3741D37B2C400C545D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		102DF3791D38707400C545D7 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		102DF37A1D38707400C545D7 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		103168071D484EC900F4DF33 /* Chapter_16_Inter3D_Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter_16_Inter3D_Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1031680A1D484EC900F4DF33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1031680C1D484EC900F4DF33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1031680D1D484EC900F4DF33 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		103168131D484EC900F4DF33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		103168151D484EC900F4DF33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		103168181D484EC900F4DF33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1031681A1D484EC900F4DF33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1031681E1D484F8A00F4DF33 /* GalleryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryViewController.h; sourceTree = "<group>"; };
+		1031681F1D484F8A00F4DF33 /* GalleryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryViewController.m; sourceTree = "<group>"; };
+		103168211D484FD400F4DF33 /* ImageViewCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewCard.h; sourceTree = "<group>"; };
+		103168221D484FD400F4DF33 /* ImageViewCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewCard.m; sourceTree = "<group>"; };
 		104622BA1D351A9F005773E5 /* Chapter4_AnimPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter4_AnimPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104622BD1D351A9F005773E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		104622BF1D351A9F005773E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -228,6 +247,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		103168041D484EC900F4DF33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		104622B71D351A9F005773E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +311,7 @@
 				1065EFA01D3CB02C008FA045 /* Chapter_13_SlideToReveal */,
 				1065EFC31D3CF663008FA045 /* Chapter_14_StrokeAndPath */,
 				10EB30581D406BA40006B89B /* Chapter_15_Simple 3D Animations */,
+				103168081D484EC900F4DF33 /* Chapter_16_Inter3D_Animations */,
 				101B526A1D2CB4620078B950 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -301,6 +328,7 @@
 				1065EF9F1D3CB02C008FA045 /* Chapter_13_SlideToReveal.app */,
 				1065EFC21D3CF663008FA045 /* Chapter_14_StrokeAndPath.app */,
 				10EB30571D406BA40006B89B /* Chapter_15_Simple 3D Animations.app */,
+				103168071D484EC900F4DF33 /* Chapter_16_Inter3D_Animations.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -400,6 +428,32 @@
 				102DF37A1D38707400C545D7 /* UIView+Extension.m */,
 			);
 			path = Categary;
+			sourceTree = "<group>";
+		};
+		103168081D484EC900F4DF33 /* Chapter_16_Inter3D_Animations */ = {
+			isa = PBXGroup;
+			children = (
+				1031680C1D484EC900F4DF33 /* AppDelegate.h */,
+				1031680D1D484EC900F4DF33 /* AppDelegate.m */,
+				103168211D484FD400F4DF33 /* ImageViewCard.h */,
+				103168221D484FD400F4DF33 /* ImageViewCard.m */,
+				1031681E1D484F8A00F4DF33 /* GalleryViewController.h */,
+				1031681F1D484F8A00F4DF33 /* GalleryViewController.m */,
+				103168121D484EC900F4DF33 /* Main.storyboard */,
+				103168151D484EC900F4DF33 /* Assets.xcassets */,
+				103168171D484EC900F4DF33 /* LaunchScreen.storyboard */,
+				1031681A1D484EC900F4DF33 /* Info.plist */,
+				103168091D484EC900F4DF33 /* Supporting Files */,
+			);
+			path = Chapter_16_Inter3D_Animations;
+			sourceTree = "<group>";
+		};
+		103168091D484EC900F4DF33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1031680A1D484EC900F4DF33 /* main.m */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		104622BB1D351A9F005773E5 /* Chapter4_5_AnimPractice */ = {
@@ -692,6 +746,23 @@
 			productReference = 102DF3611D37B2C400C545D7 /* Chapter8_Layer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		103168061D484EC900F4DF33 /* Chapter_16_Inter3D_Animations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1031681B1D484EC900F4DF33 /* Build configuration list for PBXNativeTarget "Chapter_16_Inter3D_Animations" */;
+			buildPhases = (
+				103168031D484EC900F4DF33 /* Sources */,
+				103168041D484EC900F4DF33 /* Frameworks */,
+				103168051D484EC900F4DF33 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chapter_16_Inter3D_Animations;
+			productName = Chapter_16_Inter3D_Animations;
+			productReference = 103168071D484EC900F4DF33 /* Chapter_16_Inter3D_Animations.app */;
+			productType = "com.apple.product-type.application";
+		};
 		104622B91D351A9F005773E5 /* Chapter4_AnimPractice */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 104622D01D351A9F005773E5 /* Build configuration list for PBXNativeTarget "Chapter4_AnimPractice" */;
@@ -813,6 +884,10 @@
 					102DF3601D37B2C400C545D7 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
+					103168061D484EC900F4DF33 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = N74JCBVV4U;
+					};
 					104622B91D351A9F005773E5 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -857,6 +932,7 @@
 				1065EF9E1D3CB02C008FA045 /* Chapter_13_SlideToReveal */,
 				1065EFC11D3CF663008FA045 /* Chapter_14_StrokeAndPath */,
 				10EB30561D406BA40006B89B /* Chapter_15_Simple 3D Animations */,
+				103168061D484EC900F4DF33 /* Chapter_16_Inter3D_Animations */,
 			);
 		};
 /* End PBXProject section */
@@ -889,6 +965,16 @@
 				102DF3731D37B2C400C545D7 /* LaunchScreen.storyboard in Resources */,
 				102DF3701D37B2C400C545D7 /* Assets.xcassets in Resources */,
 				102DF36E1D37B2C400C545D7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		103168051D484EC900F4DF33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				103168191D484EC900F4DF33 /* LaunchScreen.storyboard in Resources */,
+				103168161D484EC900F4DF33 /* Assets.xcassets in Resources */,
+				103168141D484EC900F4DF33 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,6 +1073,17 @@
 				102DF3681D37B2C400C545D7 /* AppDelegate.m in Sources */,
 				102DF37B1D38707400C545D7 /* UIView+Extension.m in Sources */,
 				102DF3651D37B2C400C545D7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		103168031D484EC900F4DF33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				103168201D484F8A00F4DF33 /* GalleryViewController.m in Sources */,
+				1031680E1D484EC900F4DF33 /* AppDelegate.m in Sources */,
+				103168231D484FD400F4DF33 /* ImageViewCard.m in Sources */,
+				1031680B1D484EC900F4DF33 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1109,6 +1206,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				102DF3721D37B2C400C545D7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		103168121D484EC900F4DF33 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				103168131D484EC900F4DF33 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		103168171D484EC900F4DF33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				103168181D484EC900F4DF33 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1358,6 +1471,28 @@
 			};
 			name = Release;
 		};
+		1031681C1D484EC900F4DF33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter_16_Inter3D_Animations/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-16-Inter3D-Animations";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1031681D1D484EC900F4DF33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter_16_Inter3D_Animations/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-16-Inter3D-Animations";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		104622CE1D351A9F005773E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1534,6 +1669,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		1031681B1D484EC900F4DF33 /* Build configuration list for PBXNativeTarget "Chapter_16_Inter3D_Animations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1031681C1D484EC900F4DF33 /* Debug */,
+				1031681D1D484EC900F4DF33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		104622D01D351A9F005773E5 /* Build configuration list for PBXNativeTarget "Chapter4_AnimPractice" */ = {
 			isa = XCConfigurationList;
