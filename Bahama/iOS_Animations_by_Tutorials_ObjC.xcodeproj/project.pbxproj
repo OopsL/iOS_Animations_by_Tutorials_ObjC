@@ -41,6 +41,12 @@
 		10346F331D4C578100BD7737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10346F311D4C578100BD7737 /* LaunchScreen.storyboard */; };
 		10346F391D4C57D800BD7737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10346F381D4C57D800BD7737 /* Main.storyboard */; };
 		10346F3C1D4C583F00BD7737 /* EmitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10346F3B1D4C583F00BD7737 /* EmitterViewController.m */; };
+		10346F451D4C91E300BD7737 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10346F441D4C91E300BD7737 /* main.m */; };
+		10346F481D4C91E300BD7737 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10346F471D4C91E300BD7737 /* AppDelegate.m */; };
+		10346F4E1D4C91E300BD7737 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10346F4C1D4C91E300BD7737 /* Main.storyboard */; };
+		10346F501D4C91E300BD7737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10346F4F1D4C91E300BD7737 /* Assets.xcassets */; };
+		10346F531D4C91E300BD7737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10346F511D4C91E300BD7737 /* LaunchScreen.storyboard */; };
+		10346F5A1D4C93FC00BD7737 /* PenguinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10346F591D4C93FC00BD7737 /* PenguinViewController.m */; };
 		104622BE1D351A9F005773E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622BD1D351A9F005773E5 /* main.m */; };
 		104622C11D351A9F005773E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622C01D351A9F005773E5 /* AppDelegate.m */; };
 		104622C41D351A9F005773E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104622C31D351A9F005773E5 /* ViewController.m */; };
@@ -151,6 +157,16 @@
 		10346F381D4C57D800BD7737 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		10346F3A1D4C583F00BD7737 /* EmitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterViewController.h; sourceTree = "<group>"; };
 		10346F3B1D4C583F00BD7737 /* EmitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterViewController.m; sourceTree = "<group>"; };
+		10346F411D4C91E300BD7737 /* Chapter_18_FramesAnim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter_18_FramesAnim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10346F441D4C91E300BD7737 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		10346F461D4C91E300BD7737 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		10346F471D4C91E300BD7737 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		10346F4D1D4C91E300BD7737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10346F4F1D4C91E300BD7737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10346F521D4C91E300BD7737 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10346F541D4C91E300BD7737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10346F581D4C93FC00BD7737 /* PenguinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PenguinViewController.h; sourceTree = "<group>"; };
+		10346F591D4C93FC00BD7737 /* PenguinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PenguinViewController.m; sourceTree = "<group>"; };
 		104622BA1D351A9F005773E5 /* Chapter4_AnimPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter4_AnimPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104622BD1D351A9F005773E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		104622BF1D351A9F005773E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -277,6 +293,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10346F3E1D4C91E300BD7737 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		104622B71D351A9F005773E5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,6 +359,7 @@
 				10EB30581D406BA40006B89B /* Chapter_15_Simple 3D Animations */,
 				103168081D484EC900F4DF33 /* Chapter_16_Inter3D_Animations */,
 				10346F221D4C578100BD7737 /* Chapter_17_Particle_Emitters */,
+				10346F421D4C91E300BD7737 /* Chapter_18_FramesAnim */,
 				101B526A1D2CB4620078B950 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -354,6 +378,7 @@
 				10EB30571D406BA40006B89B /* Chapter_15_Simple 3D Animations.app */,
 				103168071D484EC900F4DF33 /* Chapter_16_Inter3D_Animations.app */,
 				10346F211D4C578000BD7737 /* Chapter_17_Particle_Emitters.app */,
+				10346F411D4C91E300BD7737 /* Chapter_18_FramesAnim.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -501,6 +526,30 @@
 			isa = PBXGroup;
 			children = (
 				10346F241D4C578100BD7737 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		10346F421D4C91E300BD7737 /* Chapter_18_FramesAnim */ = {
+			isa = PBXGroup;
+			children = (
+				10346F461D4C91E300BD7737 /* AppDelegate.h */,
+				10346F471D4C91E300BD7737 /* AppDelegate.m */,
+				10346F581D4C93FC00BD7737 /* PenguinViewController.h */,
+				10346F591D4C93FC00BD7737 /* PenguinViewController.m */,
+				10346F4C1D4C91E300BD7737 /* Main.storyboard */,
+				10346F4F1D4C91E300BD7737 /* Assets.xcassets */,
+				10346F511D4C91E300BD7737 /* LaunchScreen.storyboard */,
+				10346F541D4C91E300BD7737 /* Info.plist */,
+				10346F431D4C91E300BD7737 /* Supporting Files */,
+			);
+			path = Chapter_18_FramesAnim;
+			sourceTree = "<group>";
+		};
+		10346F431D4C91E300BD7737 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10346F441D4C91E300BD7737 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -829,6 +878,23 @@
 			productReference = 10346F211D4C578000BD7737 /* Chapter_17_Particle_Emitters.app */;
 			productType = "com.apple.product-type.application";
 		};
+		10346F401D4C91E300BD7737 /* Chapter_18_FramesAnim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10346F551D4C91E300BD7737 /* Build configuration list for PBXNativeTarget "Chapter_18_FramesAnim" */;
+			buildPhases = (
+				10346F3D1D4C91E300BD7737 /* Sources */,
+				10346F3E1D4C91E300BD7737 /* Frameworks */,
+				10346F3F1D4C91E300BD7737 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chapter_18_FramesAnim;
+			productName = Chapter_18_FramesAnim;
+			productReference = 10346F411D4C91E300BD7737 /* Chapter_18_FramesAnim.app */;
+			productType = "com.apple.product-type.application";
+		};
 		104622B91D351A9F005773E5 /* Chapter4_AnimPractice */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 104622D01D351A9F005773E5 /* Build configuration list for PBXNativeTarget "Chapter4_AnimPractice" */;
@@ -958,6 +1024,10 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = N74JCBVV4U;
 					};
+					10346F401D4C91E300BD7737 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = N74JCBVV4U;
+					};
 					104622B91D351A9F005773E5 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -1004,6 +1074,7 @@
 				10EB30561D406BA40006B89B /* Chapter_15_Simple 3D Animations */,
 				103168061D484EC900F4DF33 /* Chapter_16_Inter3D_Animations */,
 				10346F201D4C578000BD7737 /* Chapter_17_Particle_Emitters */,
+				10346F401D4C91E300BD7737 /* Chapter_18_FramesAnim */,
 			);
 		};
 /* End PBXProject section */
@@ -1056,6 +1127,16 @@
 				10346F391D4C57D800BD7737 /* Main.storyboard in Resources */,
 				10346F331D4C578100BD7737 /* LaunchScreen.storyboard in Resources */,
 				10346F301D4C578100BD7737 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10346F3F1D4C91E300BD7737 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10346F531D4C91E300BD7737 /* LaunchScreen.storyboard in Resources */,
+				10346F501D4C91E300BD7737 /* Assets.xcassets in Resources */,
+				10346F4E1D4C91E300BD7737 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1175,6 +1256,16 @@
 				10346F281D4C578100BD7737 /* AppDelegate.m in Sources */,
 				10346F251D4C578100BD7737 /* main.m in Sources */,
 				10346F3C1D4C583F00BD7737 /* EmitterViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10346F3D1D4C91E300BD7737 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10346F5A1D4C93FC00BD7737 /* PenguinViewController.m in Sources */,
+				10346F481D4C91E300BD7737 /* AppDelegate.m in Sources */,
+				10346F451D4C91E300BD7737 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1321,6 +1412,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				10346F321D4C578100BD7737 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		10346F4C1D4C91E300BD7737 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10346F4D1D4C91E300BD7737 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10346F511D4C91E300BD7737 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10346F521D4C91E300BD7737 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1614,6 +1721,28 @@
 			};
 			name = Release;
 		};
+		10346F561D4C91E300BD7737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter_18_FramesAnim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-18-FramesAnim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		10346F571D4C91E300BD7737 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter_18_FramesAnim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-18-FramesAnim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		104622CE1D351A9F005773E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1805,6 +1934,14 @@
 			buildConfigurations = (
 				10346F351D4C578100BD7737 /* Debug */,
 				10346F361D4C578100BD7737 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		10346F551D4C91E300BD7737 /* Build configuration list for PBXNativeTarget "Chapter_18_FramesAnim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10346F561D4C91E300BD7737 /* Debug */,
+				10346F571D4C91E300BD7737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
