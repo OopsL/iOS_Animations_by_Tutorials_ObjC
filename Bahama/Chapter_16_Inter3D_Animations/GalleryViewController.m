@@ -13,6 +13,8 @@
 
 @property(nonatomic, strong) NSArray *imagesArray;
 
+@property(nonatomic, assign) Boolean isOpen;
+
 @end
 
 @implementation GalleryViewController
@@ -38,21 +40,43 @@
     
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
     
     for (ImageViewCard *image in self.imagesArray) {
         image.layer.anchorPoint = CGPointMake(0.5, 0.0);
         image.frame = self.view.bounds;
         [self.view addSubview:image];
+        
+        image.selectImageBlock = ^(ImageViewCard *imageCard){
+            
+            self.isOpen = NO;
+            
+            for (UIView *subView in self.view.subviews) {
+                if ([subView isKindOfClass:[ImageViewCard class]]) {
+                    if (subView == imageCard) {
+                        [UIView animateWithDuration:0.33 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                            subView.layer.transform = CATransform3DIdentity;
+                        } completion:^(BOOL finished) {
+                            [self.view bringSubviewToFront:subView];
+                        }];
+                    }else{
+                        
+                        [UIView animateWithDuration:0.33 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                            subView.alpha = 0.0;
+                        } completion:^(BOOL finished) {
+                            
+                            subView.alpha = 1.0;
+                            subView.layer.transform = CATransform3DIdentity;
+                        }];
+                    }
+          
+                    
+                }
+            }
+        };
     }
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
     
     self.navigationItem.title = ((ImageViewCard *)[self.imagesArray lastObject]).title;
     
@@ -69,6 +93,43 @@
     [self presentViewController:alertVc animated:YES completion:nil];
 }
 - (IBAction)toggleGallery:(UIBarButtonItem *)sender {
+    if (self.isOpen) {
+        
+        for (UIView *subView in self.view.subviews) {
+            if ([subView isKindOfClass:[ImageViewCard class]]) {
+                [UIView animateWithDuration:0.33 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                    subView.layer.transform = CATransform3DIdentity;
+                } completion:^(BOOL finished) {
+                    self.isOpen = NO;
+                }];
+            }
+        }
+    }else{
+        self.isOpen = YES;
+        
+        CGFloat imageOffset = 50.0;
+        for (UIView *subView in self.view.subviews) {
+            if ([subView isKindOfClass:[ImageViewCard class]]) {
+                CATransform3D transform3D = CATransform3DIdentity;
+                transform3D = CATransform3DTranslate(transform3D, 0.0, imageOffset, 0.0);
+                
+                transform3D = CATransform3DScale(transform3D, 0.95, 0.6, 1.0);
+                transform3D = CATransform3DRotate(transform3D, M_PI_4 * 0.5, -1.0, 0, 0);
+                
+                
+                CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform"];
+                anim.fromValue = [NSValue valueWithCATransform3D:subView.layer.transform];
+                anim.toValue = [NSValue valueWithCATransform3D:transform3D];
+                anim.duration = 0.33;
+                [subView.layer addAnimation:anim forKey:nil];
+                subView.layer.transform = transform3D;
+                
+                imageOffset += self.view.frame.size.height / self.imagesArray.count;
+            }
+        }
+        
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {

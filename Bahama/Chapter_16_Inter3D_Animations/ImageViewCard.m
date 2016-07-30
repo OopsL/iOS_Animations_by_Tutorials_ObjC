@@ -37,7 +37,9 @@
 
 - (void)didTapHandler:(UITapGestureRecognizer *)tap
 {
-    
+    if (self.selectImageBlock) {
+        self.selectImageBlock(self);
+    }
 }
 
 @end
