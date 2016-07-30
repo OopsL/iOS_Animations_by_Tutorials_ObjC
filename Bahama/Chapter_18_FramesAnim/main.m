@@ -2,8 +2,6 @@
 //  main.m
 //  Chapter_18_FramesAnim
 //
-//  Created by JD.K on 16/7/30.
-//  Copyright © 2016年 JD.K. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

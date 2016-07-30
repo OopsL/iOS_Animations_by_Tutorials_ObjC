@@ -2,8 +2,6 @@
 //  ContainerViewController.m
 //  iOS_Animations_by_Tutorials_ObjC
 //
-//  Created by JD.K on 16/7/21.
-//  Copyright © 2016年 JD.K. All rights reserved.
 //
 
 #import "ContainerViewController.h"
