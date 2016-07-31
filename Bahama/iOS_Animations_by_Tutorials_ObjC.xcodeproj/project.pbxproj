@@ -104,6 +104,7 @@
 		3CD8F5501D3A297700DCBEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CD8F54F1D3A297700DCBEA7 /* Assets.xcassets */; };
 		3CD8F5531D3A297700DCBEA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CD8F5511D3A297700DCBEA7 /* LaunchScreen.storyboard */; };
 		3CD8F55A1D3A644D00DCBEA7 /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD8F5591D3A644D00DCBEA7 /* AvatarView.m */; };
+		3CEA1A061D4DE7D4008621D2 /* HerbModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CEA1A051D4DE7D4008621D2 /* HerbModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -274,6 +275,8 @@
 		3CD8F5541D3A297700DCBEA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CD8F5581D3A644D00DCBEA7 /* AvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarView.h; sourceTree = "<group>"; };
 		3CD8F5591D3A644D00DCBEA7 /* AvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarView.m; sourceTree = "<group>"; };
+		3CEA1A041D4DE7D4008621D2 /* HerbModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HerbModel.h; sourceTree = "<group>"; };
+		3CEA1A051D4DE7D4008621D2 /* HerbModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HerbModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -587,6 +590,8 @@
 			children = (
 				10346F641D4CB40000BD7737 /* AppDelegate.h */,
 				10346F651D4CB40000BD7737 /* AppDelegate.m */,
+				3CEA1A041D4DE7D4008621D2 /* HerbModel.h */,
+				3CEA1A051D4DE7D4008621D2 /* HerbModel.m */,
 				10346F771D4CB81600BD7737 /* HerbDetailsViewController.h */,
 				10346F781D4CB81600BD7737 /* HerbDetailsViewController.m */,
 				10346F671D4CB40000BD7737 /* ViewController.h */,
@@ -1360,6 +1365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10346F791D4CB81600BD7737 /* HerbDetailsViewController.m in Sources */,
+				3CEA1A061D4DE7D4008621D2 /* HerbModel.m in Sources */,
 				10346F691D4CB40000BD7737 /* ViewController.m in Sources */,
 				10346F661D4CB40000BD7737 /* AppDelegate.m in Sources */,
 				10346F631D4CB40000BD7737 /* main.m in Sources */,
@@ -2071,6 +2077,7 @@
 				10346F361D4C578100BD7737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10346F551D4C91E300BD7737 /* Build configuration list for PBXNativeTarget "Chapter_18_FramesAnim" */ = {
 			isa = XCConfigurationList;
@@ -2079,6 +2086,7 @@
 				10346F571D4C91E300BD7737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10346F731D4CB40000BD7737 /* Build configuration list for PBXNativeTarget "Chapter_19_CustomPresentation" */ = {
 			isa = XCConfigurationList;
@@ -2087,6 +2095,7 @@
 				10346F751D4CB40000BD7737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		104622D01D351A9F005773E5 /* Build configuration list for PBXNativeTarget "Chapter4_AnimPractice" */ = {
 			isa = XCConfigurationList;

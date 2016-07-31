@@ -73,7 +73,7 @@ Culinary use typically distinguishes herbs as referring to the leafy green parts
         <!--Herb Details View Controller-->
         <scene sceneID="152-Sy-joa">
             <objects>
-                <viewController id="Nlo-3U-yHh" customClass="HerbDetailsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HerbDetailsViewController" id="Nlo-3U-yHh" customClass="HerbDetailsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4zg-bn-qrK"/>
                         <viewControllerLayoutGuide type="bottom" id="a50-Gm-K2F"/>
