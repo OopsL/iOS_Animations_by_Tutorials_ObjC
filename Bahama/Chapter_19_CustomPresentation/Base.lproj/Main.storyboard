@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgbg" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-S7-e8V">
+                            <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgbg" translatesAutoresizingMaskIntoConstraints="NO" id="F6E-S7-e8V">
                                 <rect key="frame" x="-16" y="0.0" width="632" height="600"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-aL-Iu9">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhz-aL-Iu9">
                                 <rect key="frame" x="0.0" y="402" width="600" height="198"/>
                             </scrollView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRf-Lv-bb7">
@@ -41,7 +41,7 @@ Culinary use typically distinguishes herbs as referring to the leafy green parts
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zhz-aL-Iu9" secondAttribute="bottom" id="0Tx-SG-d7N"/>
                             <constraint firstItem="Zhz-aL-Iu9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2OM-vV-bWz"/>
@@ -165,6 +165,7 @@ Culinary use typically distinguishes herbs as referring to the leafy green parts
                     <connections>
                         <outlet property="authorButton" destination="Zax-DE-maZ" id="hId-AD-bJP"/>
                         <outlet property="bgImage" destination="mO1-w9-BfL" id="Mf7-SU-GCB"/>
+                        <outlet property="containerView" destination="N8u-FT-OaM" id="bmW-ps-1IO"/>
                         <outlet property="descriptionView" destination="rqc-uw-mCE" id="5RA-Xz-lxg"/>
                         <outlet property="licenseButton" destination="tzx-fc-1ma" id="sM1-Xq-7Tj"/>
                         <outlet property="titleView" destination="aeA-mS-x2w" id="Z7Z-ci-zCY"/>

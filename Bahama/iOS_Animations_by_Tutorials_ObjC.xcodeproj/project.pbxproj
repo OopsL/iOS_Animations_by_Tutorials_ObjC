@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100BE5D31D4EE77C00C59BD9 /* PopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 100BE5D21D4EE77C00C59BD9 /* PopAnimator.m */; };
 		101B526E1D2CB4620078B950 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B526D1D2CB4620078B950 /* main.m */; };
 		101B52711D2CB4620078B950 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B52701D2CB4620078B950 /* AppDelegate.m */; };
 		101B52741D2CB4620078B950 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B52731D2CB4620078B950 /* ViewController.m */; };
@@ -108,6 +109,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100BE5D11D4EE77C00C59BD9 /* PopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimator.h; sourceTree = "<group>"; };
+		100BE5D21D4EE77C00C59BD9 /* PopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimator.m; sourceTree = "<group>"; };
 		101B52691D2CB4620078B950 /* bahama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bahama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101B526D1D2CB4620078B950 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		101B526F1D2CB4620078B950 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -590,6 +593,8 @@
 			children = (
 				10346F641D4CB40000BD7737 /* AppDelegate.h */,
 				10346F651D4CB40000BD7737 /* AppDelegate.m */,
+				100BE5D11D4EE77C00C59BD9 /* PopAnimator.h */,
+				100BE5D21D4EE77C00C59BD9 /* PopAnimator.m */,
 				3CEA1A041D4DE7D4008621D2 /* HerbModel.h */,
 				3CEA1A051D4DE7D4008621D2 /* HerbModel.m */,
 				10346F771D4CB81600BD7737 /* HerbDetailsViewController.h */,
@@ -1366,6 +1371,7 @@
 			files = (
 				10346F791D4CB81600BD7737 /* HerbDetailsViewController.m in Sources */,
 				3CEA1A061D4DE7D4008621D2 /* HerbModel.m in Sources */,
+				100BE5D31D4EE77C00C59BD9 /* PopAnimator.m in Sources */,
 				10346F691D4CB40000BD7737 /* ViewController.m in Sources */,
 				10346F661D4CB40000BD7737 /* AppDelegate.m in Sources */,
 				10346F631D4CB40000BD7737 /* main.m in Sources */,
@@ -1866,10 +1872,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Chapter_19_CustomPresentation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-19-CustomPresentation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1877,10 +1886,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Chapter_19_CustomPresentation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-19-CustomPresentation";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

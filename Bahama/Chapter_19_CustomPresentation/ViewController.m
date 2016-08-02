@@ -7,47 +7,78 @@
 #import "ViewController.h"
 #import "HerbModel.h"
 #import "HerbDetailsViewController.h"
+#import "PopAnimator.h"
 
-@interface ViewController ()
+#define tagPlus 1000
+
+@interface ViewController ()<UIViewControllerTransitioningDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *bgImage;
 @property (weak, nonatomic) IBOutlet UIScrollView *listView;
-
 @property(nonatomic, strong) NSArray *herbs;
+@property(nonatomic, strong) PopAnimator *transition;
+@property(nonatomic, weak) UIImageView *selectedImage;
 
 @end
 
 @implementation ViewController
 
+- (PopAnimator *)transition
+{
+    if (!_transition) {
+        _transition = [[PopAnimator alloc] init];
+    }
+    return _transition;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    __weak typeof(self) weakSelf = self;
+    self.transition.dismissCompletion = ^(){
+        weakSelf.selectedImage.hidden = NO;
+    };
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
-    [self setupListView];
-    
+    if (self.listView.subviews.count < self.herbs.count) {
+        [self setupListView];
+    }
 }
 
 - (void)setupListView
 {
-    
-    CGFloat itemHeight = self.listView.frame.size.height * 1.33;
-    CGFloat aspectRatio = [UIScreen mainScreen].bounds.size.height/[UIScreen mainScreen].bounds.size.width;
-    CGFloat itemWidth = itemHeight/aspectRatio;
-    CGFloat horizontalPadding = 10.0;
-    
     for (int i=0; i<self.herbs.count;i++) {
         HerbModel *model = self.herbs[i];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:model.image]];
-        imageView.tag = i;
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.tag = i + tagPlus;
+        [imageView setContentMode:UIViewContentModeScaleAspectFill];
         imageView.userInteractionEnabled = YES;
         imageView.layer.cornerRadius = 20.0;
         imageView.layer.masksToBounds = YES;
         [self.listView addSubview:imageView];
         
-        imageView.frame = CGRectMake(i * (itemWidth+horizontalPadding) + horizontalPadding, 0.0, itemWidth, itemHeight);
-        
-        
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapImageView:)];
         [imageView addGestureRecognizer:tap];
+    }
+    
+    self.listView.backgroundColor = [UIColor clearColor];
+    [self positionListItems];
+
+}
+
+- (void)positionListItems
+{
+    CGFloat itemHeight = self.listView.bounds.size.height * 1.33;
+    CGFloat aspectRatio = [UIScreen mainScreen].bounds.size.height/[UIScreen mainScreen].bounds.size.width;
+    CGFloat itemWidth = itemHeight/aspectRatio;
+    CGFloat horizontalPadding = 10.0;
+    for (int i=0; i<self.listView.subviews.count; i++) {
+        UIImageView *imageView = [self.listView viewWithTag:i+tagPlus];
+        imageView.frame = CGRectMake(i * (itemWidth + horizontalPadding) + horizontalPadding, 0.0, itemWidth, itemHeight);
+//        NSLog(@"---%@",NSStringFromCGRect(imageView.frame));
     }
     
     self.listView.contentSize = CGSizeMake(self.herbs.count *(itemWidth + horizontalPadding) + horizontalPadding, 0);
@@ -55,11 +86,37 @@
 
 - (void)didTapImageView:(UITapGestureRecognizer *)tap
 {
+    self.selectedImage = (UIImageView *)tap.view;
+    
     NSInteger tag = tap.view.tag;
-    HerbModel *model = self.herbs[tag];
+    HerbModel *model = self.herbs[tag - tagPlus];
     HerbDetailsViewController *herbVc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"HerbDetailsViewController"];
+    herbVc.transitioningDelegate = self;
     herbVc.herbModel = model;
     [self presentViewController:herbVc animated:YES completion:nil];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
+    
+    self.transition.originFrame = [self.selectedImage.superview convertRect:self.selectedImage.frame toView:nil];
+    _transition.presenting = YES;
+    self.selectedImage.hidden = YES;
+    
+    return self.transition;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    self.transition.presenting = NO;
+    return self.transition;
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext>  _Nonnull context) {
+        self.bgImage.alpha = (size.width > size.height) ? 0.25 : 0.55;
+        [self positionListItems];
+    } completion:nil];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

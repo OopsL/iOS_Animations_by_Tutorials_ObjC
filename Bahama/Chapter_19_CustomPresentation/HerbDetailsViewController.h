@@ -10,5 +10,6 @@
 @interface HerbDetailsViewController : UIViewController
 
 @property(nonatomic, strong) HerbModel *herbModel;
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 
 @end
