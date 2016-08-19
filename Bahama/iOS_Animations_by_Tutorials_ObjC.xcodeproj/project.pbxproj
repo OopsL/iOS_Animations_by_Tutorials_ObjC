@@ -84,6 +84,15 @@
 		1065EFDB1D3CF68E008FA045 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1065EFDA1D3CF68E008FA045 /* AppDelegate.m */; };
 		1065EFE31D3CF6AB008FA045 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1065EFE21D3CF6AB008FA045 /* Main.storyboard */; };
 		106B73F51D45A06A00746FD3 /* HamburgerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 106B73F41D45A06A00746FD3 /* HamburgerView.m */; };
+		10DC9F9D1D506FBA0010F1A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DC9F9C1D506FBA0010F1A6 /* main.m */; };
+		10DC9FA01D506FBA0010F1A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DC9F9F1D506FBA0010F1A6 /* AppDelegate.m */; };
+		10DC9FA61D506FBA0010F1A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DC9FA41D506FBA0010F1A6 /* Main.storyboard */; };
+		10DC9FA81D506FBA0010F1A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10DC9FA71D506FBA0010F1A6 /* Assets.xcassets */; };
+		10DC9FAB1D506FBA0010F1A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10DC9FA91D506FBA0010F1A6 /* LaunchScreen.storyboard */; };
+		10DC9FB21D5070DC0010F1A6 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DC9FB11D5070DC0010F1A6 /* MasterViewController.m */; };
+		10DC9FB81D50713E0010F1A6 /* RWLogoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DC9FB71D50713E0010F1A6 /* RWLogoLayer.m */; };
+		10DC9FBE1D5078500010F1A6 /* DetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DC9FBD1D5078500010F1A6 /* DetTableViewController.m */; };
+		10DC9FC11D508B6B0010F1A6 /* RevealAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 10DC9FC01D508B6B0010F1A6 /* RevealAnimator.m */; };
 		10EB30431D3E21C80006B89B /* VacationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB30421D3E21C80006B89B /* VacationTableViewController.m */; };
 		10EB30501D3E388A0006B89B /* RefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB304F1D3E388A0006B89B /* RefreshView.m */; };
 		10EB305B1D406BA40006B89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EB305A1D406BA40006B89B /* main.m */; };
@@ -241,6 +250,22 @@
 		106B73F31D45A06A00746FD3 /* HamburgerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HamburgerView.h; sourceTree = "<group>"; };
 		106B73F41D45A06A00746FD3 /* HamburgerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamburgerView.m; sourceTree = "<group>"; };
 		10DAED0C1D4849E000B6C00D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10DC9F991D506FBA0010F1A6 /* Chapter_20_NaviTransitionAnim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter_20_NaviTransitionAnim.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10DC9F9C1D506FBA0010F1A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		10DC9F9E1D506FBA0010F1A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		10DC9F9F1D506FBA0010F1A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		10DC9FA51D506FBA0010F1A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10DC9FA71D506FBA0010F1A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10DC9FAA1D506FBA0010F1A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10DC9FAC1D506FBA0010F1A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10DC9FB01D5070DC0010F1A6 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		10DC9FB11D5070DC0010F1A6 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		10DC9FB61D50713E0010F1A6 /* RWLogoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLogoLayer.h; sourceTree = "<group>"; };
+		10DC9FB71D50713E0010F1A6 /* RWLogoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLogoLayer.m; sourceTree = "<group>"; };
+		10DC9FBC1D5078500010F1A6 /* DetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetTableViewController.h; sourceTree = "<group>"; };
+		10DC9FBD1D5078500010F1A6 /* DetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetTableViewController.m; sourceTree = "<group>"; };
+		10DC9FBF1D508B6B0010F1A6 /* RevealAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevealAnimator.h; sourceTree = "<group>"; };
+		10DC9FC01D508B6B0010F1A6 /* RevealAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevealAnimator.m; sourceTree = "<group>"; };
 		10EB30411D3E21C80006B89B /* VacationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VacationTableViewController.h; sourceTree = "<group>"; };
 		10EB30421D3E21C80006B89B /* VacationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VacationTableViewController.m; sourceTree = "<group>"; };
 		10EB304E1D3E388A0006B89B /* RefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshView.h; sourceTree = "<group>"; };
@@ -360,6 +385,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10DC9F961D506FBA0010F1A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10EB30541D406BA40006B89B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,6 +425,7 @@
 				10346F221D4C578100BD7737 /* Chapter_17_Particle_Emitters */,
 				10346F421D4C91E300BD7737 /* Chapter_18_FramesAnim */,
 				10346F601D4CB40000BD7737 /* Chapter_19_CustomPresentation */,
+				10DC9F9A1D506FBA0010F1A6 /* Chapter_20_NaviTransitionAnim */,
 				101B526A1D2CB4620078B950 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -413,6 +446,7 @@
 				10346F211D4C578000BD7737 /* Chapter_17_Particle_Emitters.app */,
 				10346F411D4C91E300BD7737 /* Chapter_18_FramesAnim.app */,
 				10346F5F1D4CB40000BD7737 /* Chapter_19_CustomPresentation.app */,
+				10DC9F991D506FBA0010F1A6 /* Chapter_20_NaviTransitionAnim.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -772,6 +806,36 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		10DC9F9A1D506FBA0010F1A6 /* Chapter_20_NaviTransitionAnim */ = {
+			isa = PBXGroup;
+			children = (
+				10DC9F9E1D506FBA0010F1A6 /* AppDelegate.h */,
+				10DC9F9F1D506FBA0010F1A6 /* AppDelegate.m */,
+				10DC9FB01D5070DC0010F1A6 /* MasterViewController.h */,
+				10DC9FB11D5070DC0010F1A6 /* MasterViewController.m */,
+				10DC9FBC1D5078500010F1A6 /* DetTableViewController.h */,
+				10DC9FBD1D5078500010F1A6 /* DetTableViewController.m */,
+				10DC9FB61D50713E0010F1A6 /* RWLogoLayer.h */,
+				10DC9FB71D50713E0010F1A6 /* RWLogoLayer.m */,
+				10DC9FBF1D508B6B0010F1A6 /* RevealAnimator.h */,
+				10DC9FC01D508B6B0010F1A6 /* RevealAnimator.m */,
+				10DC9FA41D506FBA0010F1A6 /* Main.storyboard */,
+				10DC9FA71D506FBA0010F1A6 /* Assets.xcassets */,
+				10DC9FA91D506FBA0010F1A6 /* LaunchScreen.storyboard */,
+				10DC9FAC1D506FBA0010F1A6 /* Info.plist */,
+				10DC9F9B1D506FBA0010F1A6 /* Supporting Files */,
+			);
+			path = Chapter_20_NaviTransitionAnim;
+			sourceTree = "<group>";
+		};
+		10DC9F9B1D506FBA0010F1A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				10DC9F9C1D506FBA0010F1A6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		10EB30581D406BA40006B89B /* Chapter_15_Simple 3D Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -1044,6 +1108,23 @@
 			productReference = 1065EFC21D3CF663008FA045 /* Chapter_14_StrokeAndPath.app */;
 			productType = "com.apple.product-type.application";
 		};
+		10DC9F981D506FBA0010F1A6 /* Chapter_20_NaviTransitionAnim */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10DC9FAF1D506FBA0010F1A6 /* Build configuration list for PBXNativeTarget "Chapter_20_NaviTransitionAnim" */;
+			buildPhases = (
+				10DC9F951D506FBA0010F1A6 /* Sources */,
+				10DC9F961D506FBA0010F1A6 /* Frameworks */,
+				10DC9F971D506FBA0010F1A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chapter_20_NaviTransitionAnim;
+			productName = Chapter_20_NaviTransitionAnim;
+			productReference = 10DC9F991D506FBA0010F1A6 /* Chapter_20_NaviTransitionAnim.app */;
+			productType = "com.apple.product-type.application";
+		};
 		10EB30561D406BA40006B89B /* Chapter_15_Simple 3D Animations */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10EB306B1D406BA50006B89B /* Build configuration list for PBXNativeTarget "Chapter_15_Simple 3D Animations" */;
@@ -1111,7 +1192,7 @@
 					};
 					10346F5E1D4CB40000BD7737 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = N74JCBVV4U;
+						DevelopmentTeam = RNJHS2QP35;
 					};
 					104622B91D351A9F005773E5 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1125,6 +1206,10 @@
 					1065EFC11D3CF663008FA045 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = N74JCBVV4U;
+					};
+					10DC9F981D506FBA0010F1A6 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = RNJHS2QP35;
 					};
 					10EB30561D406BA40006B89B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -1161,6 +1246,7 @@
 				10346F201D4C578000BD7737 /* Chapter_17_Particle_Emitters */,
 				10346F401D4C91E300BD7737 /* Chapter_18_FramesAnim */,
 				10346F5E1D4CB40000BD7737 /* Chapter_19_CustomPresentation */,
+				10DC9F981D506FBA0010F1A6 /* Chapter_20_NaviTransitionAnim */,
 			);
 		};
 /* End PBXProject section */
@@ -1273,6 +1359,16 @@
 				1065EFE31D3CF6AB008FA045 /* Main.storyboard in Resources */,
 				1065EFD41D3CF663008FA045 /* LaunchScreen.storyboard in Resources */,
 				1065EFD11D3CF663008FA045 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10DC9F971D506FBA0010F1A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10DC9FAB1D506FBA0010F1A6 /* LaunchScreen.storyboard in Resources */,
+				10DC9FA81D506FBA0010F1A6 /* Assets.xcassets in Resources */,
+				10DC9FA61D506FBA0010F1A6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1421,6 +1517,19 @@
 				1065EFDB1D3CF68E008FA045 /* AppDelegate.m in Sources */,
 				10EB30501D3E388A0006B89B /* RefreshView.m in Sources */,
 				1065EFC61D3CF663008FA045 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10DC9F951D506FBA0010F1A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10DC9FB21D5070DC0010F1A6 /* MasterViewController.m in Sources */,
+				10DC9FA01D506FBA0010F1A6 /* AppDelegate.m in Sources */,
+				10DC9F9D1D506FBA0010F1A6 /* main.m in Sources */,
+				10DC9FC11D508B6B0010F1A6 /* RevealAnimator.m in Sources */,
+				10DC9FB81D50713E0010F1A6 /* RWLogoLayer.m in Sources */,
+				10DC9FBE1D5078500010F1A6 /* DetTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1609,6 +1718,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				1065EFD31D3CF663008FA045 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		10DC9FA41D506FBA0010F1A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10DC9FA51D506FBA0010F1A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10DC9FA91D506FBA0010F1A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10DC9FAA1D506FBA0010F1A6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1990,6 +2115,34 @@
 			};
 			name = Release;
 		};
+		10DC9FAD1D506FBA0010F1A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Chapter_20_NaviTransitionAnim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-20-NaviTransitionAnim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		10DC9FAE1D506FBA0010F1A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Chapter_20_NaviTransitionAnim/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-20-NaviTransitionAnim";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
 		10EB306C1D406BA50006B89B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2141,6 +2294,15 @@
 			buildConfigurations = (
 				1065EFD71D3CF663008FA045 /* Debug */,
 				1065EFD81D3CF663008FA045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10DC9FAF1D506FBA0010F1A6 /* Build configuration list for PBXNativeTarget "Chapter_20_NaviTransitionAnim" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10DC9FAD1D506FBA0010F1A6 /* Debug */,
+				10DC9FAE1D506FBA0010F1A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
