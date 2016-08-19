@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		100BE5D31D4EE77C00C59BD9 /* PopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 100BE5D21D4EE77C00C59BD9 /* PopAnimator.m */; };
+		100CA4FF1D66DD9400D10948 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 100CA4FE1D66DD9400D10948 /* main.m */; };
+		100CA5221D66DDFE00D10948 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 100CA5131D66DDFE00D10948 /* AppDelegate.m */; };
+		100CA5231D66DDFE00D10948 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 100CA5141D66DDFE00D10948 /* Assets.xcassets */; };
+		100CA5241D66DDFE00D10948 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100CA5161D66DDFE00D10948 /* LaunchScreen.storyboard */; };
+		100CA5251D66DDFE00D10948 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100CA5181D66DDFE00D10948 /* Main.storyboard */; };
+		100CA5261D66DDFE00D10948 /* DetTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100CA51B1D66DDFE00D10948 /* DetTableViewController.m */; };
+		100CA5271D66DDFE00D10948 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 100CA51D1D66DDFE00D10948 /* MasterViewController.m */; };
+		100CA5281D66DDFE00D10948 /* RevealAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 100CA51F1D66DDFE00D10948 /* RevealAnimator.m */; };
+		100CA5291D66DDFE00D10948 /* RWLogoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 100CA5211D66DDFE00D10948 /* RWLogoLayer.m */; };
 		101B526E1D2CB4620078B950 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B526D1D2CB4620078B950 /* main.m */; };
 		101B52711D2CB4620078B950 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B52701D2CB4620078B950 /* AppDelegate.m */; };
 		101B52741D2CB4620078B950 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101B52731D2CB4620078B950 /* ViewController.m */; };
@@ -120,6 +129,22 @@
 /* Begin PBXFileReference section */
 		100BE5D11D4EE77C00C59BD9 /* PopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopAnimator.h; sourceTree = "<group>"; };
 		100BE5D21D4EE77C00C59BD9 /* PopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopAnimator.m; sourceTree = "<group>"; };
+		100CA4FB1D66DD9400D10948 /* Chapter_21_InteractiveAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chapter_21_InteractiveAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		100CA4FE1D66DD9400D10948 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		100CA50E1D66DD9400D10948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		100CA5121D66DDFE00D10948 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		100CA5131D66DDFE00D10948 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		100CA5141D66DDFE00D10948 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		100CA5171D66DDFE00D10948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		100CA5191D66DDFE00D10948 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		100CA51A1D66DDFE00D10948 /* DetTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetTableViewController.h; sourceTree = "<group>"; };
+		100CA51B1D66DDFE00D10948 /* DetTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetTableViewController.m; sourceTree = "<group>"; };
+		100CA51C1D66DDFE00D10948 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		100CA51D1D66DDFE00D10948 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		100CA51E1D66DDFE00D10948 /* RevealAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevealAnimator.h; sourceTree = "<group>"; };
+		100CA51F1D66DDFE00D10948 /* RevealAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevealAnimator.m; sourceTree = "<group>"; };
+		100CA5201D66DDFE00D10948 /* RWLogoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWLogoLayer.h; sourceTree = "<group>"; };
+		100CA5211D66DDFE00D10948 /* RWLogoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWLogoLayer.m; sourceTree = "<group>"; };
 		101B52691D2CB4620078B950 /* bahama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bahama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101B526D1D2CB4620078B950 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		101B526F1D2CB4620078B950 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -308,6 +333,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		100CA4F81D66DD9400D10948 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		101B52661D2CB4620078B950 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,6 +441,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		100CA4FC1D66DD9400D10948 /* Chapter_21_InteractiveAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				100CA5121D66DDFE00D10948 /* AppDelegate.h */,
+				100CA5131D66DDFE00D10948 /* AppDelegate.m */,
+				100CA51A1D66DDFE00D10948 /* DetTableViewController.h */,
+				100CA51B1D66DDFE00D10948 /* DetTableViewController.m */,
+				100CA51C1D66DDFE00D10948 /* MasterViewController.h */,
+				100CA51D1D66DDFE00D10948 /* MasterViewController.m */,
+				100CA51E1D66DDFE00D10948 /* RevealAnimator.h */,
+				100CA51F1D66DDFE00D10948 /* RevealAnimator.m */,
+				100CA5201D66DDFE00D10948 /* RWLogoLayer.h */,
+				100CA5211D66DDFE00D10948 /* RWLogoLayer.m */,
+				100CA5141D66DDFE00D10948 /* Assets.xcassets */,
+				100CA5161D66DDFE00D10948 /* LaunchScreen.storyboard */,
+				100CA5181D66DDFE00D10948 /* Main.storyboard */,
+				100CA50E1D66DD9400D10948 /* Info.plist */,
+				100CA4FD1D66DD9400D10948 /* Supporting Files */,
+			);
+			path = Chapter_21_InteractiveAnimation;
+			sourceTree = "<group>";
+		};
+		100CA4FD1D66DD9400D10948 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				100CA4FE1D66DD9400D10948 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		101B52601D2CB4620078B950 = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +488,7 @@
 				10346F421D4C91E300BD7737 /* Chapter_18_FramesAnim */,
 				10346F601D4CB40000BD7737 /* Chapter_19_CustomPresentation */,
 				10DC9F9A1D506FBA0010F1A6 /* Chapter_20_NaviTransitionAnim */,
+				100CA4FC1D66DD9400D10948 /* Chapter_21_InteractiveAnimation */,
 				101B526A1D2CB4620078B950 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -447,6 +510,7 @@
 				10346F411D4C91E300BD7737 /* Chapter_18_FramesAnim.app */,
 				10346F5F1D4CB40000BD7737 /* Chapter_19_CustomPresentation.app */,
 				10DC9F991D506FBA0010F1A6 /* Chapter_20_NaviTransitionAnim.app */,
+				100CA4FB1D66DD9400D10948 /* Chapter_21_InteractiveAnimation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -921,6 +985,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		100CA4FA1D66DD9400D10948 /* Chapter_21_InteractiveAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 100CA50F1D66DD9400D10948 /* Build configuration list for PBXNativeTarget "Chapter_21_InteractiveAnimation" */;
+			buildPhases = (
+				100CA4F71D66DD9400D10948 /* Sources */,
+				100CA4F81D66DD9400D10948 /* Frameworks */,
+				100CA4F91D66DD9400D10948 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chapter_21_InteractiveAnimation;
+			productName = Chapter_21_InteractiveAnimation;
+			productReference = 100CA4FB1D66DD9400D10948 /* Chapter_21_InteractiveAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
 		101B52681D2CB4620078B950 /* bahama */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 101B52801D2CB4620078B950 /* Build configuration list for PBXNativeTarget "bahama" */;
@@ -1168,6 +1249,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = JD.K;
 				TargetAttributes = {
+					100CA4FA1D66DD9400D10948 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					101B52681D2CB4620078B950 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -1247,11 +1331,22 @@
 				10346F401D4C91E300BD7737 /* Chapter_18_FramesAnim */,
 				10346F5E1D4CB40000BD7737 /* Chapter_19_CustomPresentation */,
 				10DC9F981D506FBA0010F1A6 /* Chapter_20_NaviTransitionAnim */,
+				100CA4FA1D66DD9400D10948 /* Chapter_21_InteractiveAnimation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		100CA4F91D66DD9400D10948 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100CA5251D66DDFE00D10948 /* Main.storyboard in Resources */,
+				100CA5231D66DDFE00D10948 /* Assets.xcassets in Resources */,
+				100CA5241D66DDFE00D10948 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		101B52671D2CB4620078B950 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1396,6 +1491,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		100CA4F71D66DD9400D10948 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100CA5271D66DDFE00D10948 /* MasterViewController.m in Sources */,
+				100CA5221D66DDFE00D10948 /* AppDelegate.m in Sources */,
+				100CA5281D66DDFE00D10948 /* RevealAnimator.m in Sources */,
+				100CA4FF1D66DD9400D10948 /* main.m in Sources */,
+				100CA5261D66DDFE00D10948 /* DetTableViewController.m in Sources */,
+				100CA5291D66DDFE00D10948 /* RWLogoLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		101B52651D2CB4620078B950 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1562,6 +1670,24 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		100CA5161D66DDFE00D10948 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				100CA5171D66DDFE00D10948 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		100CA5181D66DDFE00D10948 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				100CA5191D66DDFE00D10948 /* Base */,
+			);
+			name = Main.storyboard;
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
 		101B52751D2CB4620078B950 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1773,6 +1899,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		100CA5101D66DD9400D10948 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter_21_InteractiveAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-21-InteractiveAnimation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		100CA5111D66DD9400D10948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Chapter_21_InteractiveAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Chapter-21-InteractiveAnimation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		101B527E1D2CB4620078B950 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2190,6 +2338,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		100CA50F1D66DD9400D10948 /* Build configuration list for PBXNativeTarget "Chapter_21_InteractiveAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				100CA5101D66DD9400D10948 /* Debug */,
+				100CA5111D66DD9400D10948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		101B52641D2CB4620078B950 /* Build configuration list for PBXProject "iOS_Animations_by_Tutorials_ObjC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
