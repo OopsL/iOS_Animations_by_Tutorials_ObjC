@@ -6,10 +6,12 @@
 
 #import "DetTableViewController.h"
 #import "RWLogoLayer.h"
+#import "RevealAnimator.h"
+#import "MasterViewController.h"
 
 @interface DetTableViewController ()
 @property(nonatomic, strong) NSArray *packItems;
-
+@property(nonatomic, weak) RevealAnimator *animator;
 @end
 
 @implementation DetTableViewController
@@ -33,10 +35,37 @@
     self.view.layer.mask = self.maskLayer;
 }
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];
+    [super viewDidAppear:animated];
     self.view.layer.mask = nil;
+    
+    MasterViewController *masterVc = self.navigationController.viewControllers.firstObject;
+    if (masterVc) {
+        self.animator = masterVc.transition;
+    }
+    
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(didPan:)];
+    [self.view addGestureRecognizer:pan];
+    
+}
+
+- (void)didPan:(UIPanGestureRecognizer *)pan
+{
+    if (self.animator) {
+        switch (pan.state) {
+            case UIGestureRecognizerStateBegan:
+                self.animator.interactive = YES;
+                [self.navigationController popViewControllerAnimated:YES];
+                
+                break;
+                
+            default:
+                break;
+        }
+        [self.animator handlePan:pan];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -33,7 +33,7 @@
             
             CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"transform"];
             anim.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
-            anim.toValue = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DMakeTranslation(0, -15, 0), CATransform3DMakeScale(150, 150, 1.0))];
+            anim.toValue = [NSValue valueWithCATransform3D:CATransform3DConcat(CATransform3DMakeTranslation(0, -10, 0), CATransform3DMakeScale(150, 150, 1.0))];
             anim.duration = animDuration;
             anim.fillMode = kCAFillModeForwards;
             anim.delegate = self;
@@ -77,6 +77,33 @@
 
 - (void)handlePan:(UIPanGestureRecognizer *)pan
 {
+    CGPoint point = [pan translationInView:pan.view.superview];
+    CGFloat progress = fabs(point.x/200.0);
+    progress = MIN(MAX(progress, 0.01), 0.99);
+    
+    switch (pan.state) {
+        case UIGestureRecognizerStateChanged:
+            [self updateInteractiveTransition:progress];
+            break;
+         case UIGestureRecognizerStateCancelled:
+         case UIGestureRecognizerStateEnded:
+                {
+                    CALayer *transitionLayer = [self.storeContext containerView].layer;
+                    transitionLayer.beginTime = CACurrentMediaTime();
+                    if (progress < 0.5) {
+                        self.completionSpeed = -1.0;
+                        [self cancelInteractiveTransition];
+                    }else{
+                        self.completionSpeed = 1.0;
+                        [self finishInteractiveTransition];
+                    }
+                    self.interactive = false;
+                }
+
+            break;
+        default:
+            break;
+    }
     
 }
 

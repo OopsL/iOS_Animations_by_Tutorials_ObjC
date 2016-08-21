@@ -11,7 +11,6 @@
 
 @interface MasterViewController ()<UINavigationControllerDelegate>
 
-@property(nonatomic, strong) RevealAnimator *transition;
 
 @end
 
@@ -58,7 +57,7 @@
         case UIGestureRecognizerStateBegan:
             self.transition.interactive = true;
             [self performSegueWithIdentifier:@"details" sender:nil];
-
+            break;
         default:
             [self.transition handlePan:pan];
             break;
